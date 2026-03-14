@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "Prestige Lakeside ",
+    "developer": "Prestige Group",
+    "location": "Whitefield, Bangalore",
+    "rera": "PRM/KA/RERA/1251",
+    "price": 8500000,
+    "badge": "New Launch",
+    "category": "Residential",
+   "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1450 sq.ft",
+    "segment": "Premium",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "Godrej Woodland",
+    "developer": "Godrej Properties",
+    "location": "Sarjapur, Bangalore",
+    "rera": "PRM/KA/RERA/2234",
+    "price": 9500000,
+    "badge": "Upcoming",
+    "category": "Residential",
+    "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1800 sq.ft",
+    "segment": "Luxury",
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "Sobha Dream Acres",
+    "developer": "Sobha Limited",
+    "location": "Panathur, Bangalore",
+    "rera": "PRM/KA/RERA/5567",
+    "price": 11000000,
+    "badge": "Ready To Move",
+    "category": "Residential",
+    "type": "Apartment",
+    "configuration": "2 BHK",
+    "area": "1200 sq.ft",
+    "segment": "Mid Segment",
+    "images": [
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pragati Iris",
+    "developer": "Prestige Group",
+    "location": "Whitefield, Bangalore",
+    "rera": "PRM/KA/RERA/5431",
+    "price": 8500000,
+    "badge": "New Launch",
+    "category": "Residential",
+   "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1450 sq.ft",
+    "segment": "Premium",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+    ]
+  },
+    {
+        "id": 5,
+        "name": "Godrej Woodland",
+        "developer": "Godrej Properties",
+        "location": "Sarjapur, Bangalore",
+        "rera": "PRM/KA/RERA/2234",
+        "price": 9500000,
+        "badge": "Upcoming",
+        "category": "Residential",
+        "type": "Independent House",
+        "configuration": "3 BHK",
+        "area": "1800 sq.ft",
+        "segment": "Luxury",
+        "images": [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+        ]
+    },
+    
+    {
+        "id": 6,
+        "name": "Sobha Dream Acres",
+        "developer": "Sobha Limited",
+        "location": "Panathur, Bangalore",
+        "rera": "PRM/KA/RERA/5567",
+        "price": 11000000,
+        "badge": "Ready To Move",
+        "category": "Residential",
+        "type": "Villa",
+        "configuration": "2 BHK",
+        "area": "1200 sq.ft",
+        "segment": "Mid Segment",
+        "images": [
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+        ]
+    }
+]
