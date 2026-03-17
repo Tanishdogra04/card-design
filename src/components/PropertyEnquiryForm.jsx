@@ -5,7 +5,7 @@ export default function PropertyEnquiryForm() {
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState(""); // success / error
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,44 +16,42 @@ export default function PropertyEnquiryForm() {
 
     // ✅ Validation
     if (!name || !phone) {
-      setMessage("Name and Phone are required ❗");
-      setStatus("error");
-
-      setTimeout(() => setMessage(""), 3000);
+      showToast("Name and Phone are required ❗", "error");
       return;
     }
 
     setLoading(true);
-    setMessage("");
 
     try {
-  const res = await fetch("http://localhost:5000/api/enquiry", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name, phone, email }),
-  });
+      const res = await fetch("http://localhost:5000/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, phone, email }),
+      });
 
-  const data = await res.json(); // 🔥 read backend response
+      const data = await res.json();
 
-  if (res.ok) {
-    setMessage(data.message || "Enquiry submitted successfully ✅");
-    setStatus("success");
-    e.target.reset();
-  } else {
-    setMessage(data.message || "Something went wrong ❌"); // 🔥 show real error
-    setStatus("error");
-  }
+      if (res.ok) {
+        showToast(data.message, "success");
+        e.target.reset();
+      } else {
+        showToast(data.message, "error");
+      }
 
-} catch (err) {
-  setMessage("Server error ❌");
-  setStatus("error");
-}
+    } catch (err) {
+      showToast("Server error ❌", "error");
+    }
 
     setLoading(false);
+  };
 
-    // 🔥 Auto hide after 3 sec
+  // 🔥 Toast helper
+  const showToast = (msg, type) => {
+    setMessage(msg);
+    setStatus(type);
+
     setTimeout(() => {
       setMessage("");
     }, 3000);
@@ -61,10 +59,11 @@ export default function PropertyEnquiryForm() {
 
   return (
     <>
-      {/* 🔥 TOAST MESSAGE */}
+      {/* 🔥 TOAST */}
       {message && (
         <div
-          className={`fixed top-5 right-5 px-5 py-3 rounded-lg shadow-lg text-white z-50 transition-all duration-300
+          className={`fixed top-5 right-5 px-6 py-3 rounded-lg shadow-lg text-white z-50 
+          transition-all duration-300 animate-slideIn
           ${status === "success" ? "bg-green-500" : "bg-red-500"}`}
         >
           {message}

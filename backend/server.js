@@ -1,32 +1,34 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
 
-// ✅ Middleware
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-
-// ✅ MongoDB Atlas Connection
-mongoose.connect("mongodb+srv://tanish:Tanish123@cluster0.ftfutee.mongodb.net/realestate")
+// MongoDB
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Atlas Connected"))
   .catch(err => console.log(err));
 
+// Test Route
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
 
-// ✅ Schema
+// Schema
 const enquirySchema = new mongoose.Schema({
   name: String,
   phone: {
     type: String,
     required: true,
-    unique: true, 
+    unique: true,
   },
-  email: {
-    type: String,
-  
-  },
+  email: String,
   createdAt: {
     type: Date,
     default: Date.now,
@@ -35,19 +37,20 @@ const enquirySchema = new mongoose.Schema({
 
 const Enquiry = mongoose.model("Enquiry", enquirySchema);
 
-
-// ✅ API Route
+// API
 app.post("/api/enquiry", async (req, res) => {
   try {
     const { name, phone, email } = req.body;
 
-    // 🔥 Normalize phone (important)
-    const cleanPhone = phone.trim();
+    const cleanPhone = phone.replace(/\D/g, "");
 
-    // 🔥 Check existing
-    const existing = await Enquiry.findOne({
-      phone: cleanPhone,
-    });
+    if (!name || !cleanPhone) {
+      return res.status(400).json({
+        message: "Name and Phone are required ❗",
+      });
+    }
+
+    const existing = await Enquiry.findOne({ phone: cleanPhone });
 
     if (existing) {
       return res.status(400).json({
@@ -64,27 +67,27 @@ app.post("/api/enquiry", async (req, res) => {
     await newEnquiry.save();
 
     res.status(200).json({
-      message: "Saved successfully ✅",
+      message: "Enquiry submitted successfully ✅",
     });
 
   } catch (err) {
-  console.log(err);
+    console.log(err);
 
-  // 🔥 Handle duplicate error cleanly
-  if (err.code === 11000) {
-    return res.status(400).json({
-      message: "You already submitted enquiry ❗",
+    if (err.code === 11000) {
+      return res.status(400).json({
+        message: "You already submitted enquiry ❗",
+      });
+    }
+
+    res.status(500).json({
+      message: "Server error ❌",
     });
   }
-
-  res.status(500).json({
-    message: "Server error ❌",
-  });
-}
 });
 
+// PORT FIX
+const PORT = process.env.PORT || 5000;
 
-// ✅ Server Start
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
