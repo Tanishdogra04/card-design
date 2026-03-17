@@ -20,29 +20,37 @@ export default function PropertyEnquiryForm() {
       return;
     }
 
+    // 🔥 Prevent multiple clicks
+    if (loading) return;
+
     setLoading(true);
 
     try {
-      const res = await fetch("https://card-design-w205.onrender.com/api/enquiry", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, phone, email }),
-      });
+  const res = await fetch("https://card-design-w205.onrender.com/api/enquiry", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, phone, email }),
+  });
 
-      const data = await res.json();
+  const data = await res.json();
 
-      if (res.ok) {
-        showToast(data.message, "success");
-        e.target.reset();
-      } else {
-        showToast(data.message, "error");
-      }
+  // ✅ DEBUG HERE
+  console.log("Response:", res);
+  console.log("Data:", data);
 
-    } catch (err) {
-      showToast("Server error ❌", "error");
-    }
+  if (res.ok) {
+    showToast(data.message || "Enquiry submitted successfully ✅", "success");
+    e.target.reset();
+  } else {
+    showToast(data.message || "Something went wrong ❌", "error");
+  }
+
+} catch (err) {
+  console.log("Error:", err); // also log error
+  showToast("Server is waking up ⏳ Try again...", "error");
+}
 
     setLoading(false);
   };
@@ -63,7 +71,7 @@ export default function PropertyEnquiryForm() {
       {message && (
         <div
           className={`fixed top-5 right-5 px-6 py-3 rounded-lg shadow-lg text-white z-50 
-          transition-all duration-300 animate-slideIn
+          transition-all duration-300
           ${status === "success" ? "bg-green-500" : "bg-red-500"}`}
         >
           {message}
@@ -118,6 +126,7 @@ export default function PropertyEnquiryForm() {
           </button>
 
         </form>
+        
 
       </motion.div>
     </>

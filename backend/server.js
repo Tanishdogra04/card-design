@@ -7,7 +7,11 @@ const cors = require("cors");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://card-design-6slw.vercel.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 // MongoDB
@@ -38,9 +42,7 @@ const enquirySchema = new mongoose.Schema({
 const Enquiry = mongoose.model("Enquiry", enquirySchema);
 
 // API
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
-});
+
 
 app.post("/api/enquiry", async (req, res) => {
   try {
