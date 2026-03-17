@@ -1,1 +1,48 @@
 @import "tailwindcss";
+.shine-box{
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-box::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  animation: shineMove 3s infinite;
+}
+
+@keyframes shineMove{
+  0%{ left:-120%; }
+  100%{ left:120%; }
+}
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #ff4da6,
+    #a855f7,
+    #ffffff
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s linear infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
