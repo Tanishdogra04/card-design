@@ -38,6 +38,10 @@ const enquirySchema = new mongoose.Schema({
 const Enquiry = mongoose.model("Enquiry", enquirySchema);
 
 // API
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 app.post("/api/enquiry", async (req, res) => {
   try {
     const { name, phone, email } = req.body;
