@@ -26,7 +26,7 @@ export default function PropertyEnquiryForm() {
     setLoading(true);
 
     try {
-  const res = await fetch("https://card-design-w205.onrender.com/api/enquiry", {
+  const res = await fetch("http://localhost:5000/api/enquiry", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

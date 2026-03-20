@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Prestige Lakeside Habitat",
+    "developer": "Prestige Group",
+    "location": "Bangalore",
+    "rera": "PRM/KA/RERA/1251",
+    "price": 8500000,
+    "badge": "New Launch",
+    "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1450 sq.ft",
+    "facing": "East",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Godrej Woodland",
+    "developer": "Godrej Properties",
+    "location": "Chandigarh",
+    "rera": "PRM/KA/RERA/1252",
+    "price": 6500000,
+    "badge": "Ready to Move",
+    "type": "Villa",
+    "configuration": "4 BHK",
+    "area": "2200 sq.ft",
+    "facing": "North",
+    "furnishing": " Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
+      "https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Brigade Cornerstone",
+    "developer": "Brigade Group",
+    "location": "Noida",
+    "rera": "PRM/KA/RERA/1253",
+    "price": 7200000,
+    "badge": "Under Construction",
+    "type": "Apartment",
+    "configuration": "2 BHK",
+    "area": "1100 sq.ft",
+    "facing": "West",
+    "furnishing": "Unfurnished",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sobha Dream Acres",
+    "developer": "Sobha Ltd",
+    "location": "Kasauali, Himachal Pradesh",
+    "rera": "PRM/KA/RERA/1254",
+    "price": 5800000,
+    "badge": "Affordable",
+    "type": "Apartment",
+    "configuration": "2 BHK",
+    "area": "1000 sq.ft",
+    "facing": "South",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Purva Palm Beach",
+    "developer": "Puravankara Ltd",
+    "location": "Goa",
+    "rera": "PRM/KA/RERA/1255",
+    "price": 9000000,
+    "badge": "New Launch",
+    "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1300 sq.ft",
+    "facing": "North-East",
+    "images": [
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+    ]
+  }
+]

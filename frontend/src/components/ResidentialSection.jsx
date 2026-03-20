@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 import { useRef } from "react";
-import NewPropertyCard from "./NewPropertyCard";
+
 
 export default function ResidentialSection() {
 
@@ -84,11 +84,18 @@ export default function ResidentialSection() {
           </div>
 
           <Link
-            to="/residential"
-            className="mt-16 w-full bg-purple-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition text-center"
-          >
-            Explore Properties →
-          </Link>
+  to="/residential"
+  className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition text-center"
+>
+  Explore Properties →
+</Link>
+
+<Link
+  to="/new-page"
+  className="mt-2 w-full border border-purple-600 text-purple-600 py-2 rounded-lg text-sm font-medium hover:bg-purple-50 transition text-center"
+>
+  New Page
+</Link>
 
         </div>
 
@@ -129,7 +136,7 @@ export default function ResidentialSection() {
       </div>
 
     </section>
-    <NewPropertyCard/>
+  
     </>
   );
 }

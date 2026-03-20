@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ChevronLeft,
   ChevronRight,
@@ -12,31 +13,12 @@ import {
   Phone,
   ArrowUpRight
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
-export default function NewPropertyCard() {
 
-  /* STATIC PROPERTY DATA */
 
-  const property = {
-    id: 1,
-    name: "Prestige Lakeside Habitat",
-    developer: "Prestige Group",
-    location: "Whitefield, Bangalore",
-    rera: "PRM/KA/RERA/1251",
-    price: 8500000,
-    badge: "New Launch",
-    type: "Apartment",
-    configuration: "3 BHK",
-    area: "1450 sq.ft",
-    facing: "East",
-    images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae"
-    ]
-  };
-
+export default function NewPropertyCard({ property }) {
+  
+const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [liked, setLiked] = useState(false);
 
@@ -73,12 +55,13 @@ export default function NewPropertyCard() {
 
   return (
 
-    <Link to={`/property/${property.id}`}>
+   
 
-      <div className="bg-white rounded-xl shadow-md overflow-hidden w-[320px] ml-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+     <div className="bg-white rounded-xl shadow-md overflow-hidden w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+>
 
         {/* IMAGE SECTION */}
-        <div className="relative h-[200px] overflow-hidden">
+        <div className="relative h-[180px] sm:h-[200px]overflow-hidden">
 
           <img
             src={images[index]}
@@ -158,7 +141,7 @@ export default function NewPropertyCard() {
           {/* ROW 1 */}
           <div className="flex justify-between items-start">
 
-            <h3 className="font-semibold text-sm leading-snug">
+           <h3 className="font-semibold text-sm sm:text-base leading-snug">
               {property.name}
             </h3>
 
@@ -234,31 +217,44 @@ export default function NewPropertyCard() {
           </div>
 
           {/* CTA BUTTONS */}
-          <div className="flex gap-3 pt-2">
+        <div className="flex flex-col gap-3 pt-2">
 
-            <button
-              onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center gap-1 border border-purple-600 text-purple-600 text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-50"
-            >
-              <Download size={16} />
-              Brochure
-            </button>
+  {/* Top Row */}
+  <div className="flex gap-3">
 
-            <button
-              onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center gap-1 bg-purple-600 text-white text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-700"
-            >
-              <Phone size={16} />
-              Enquire
-            </button>
+    <button
+      onClick={(e) => e.preventDefault()}
+      className="flex items-center justify-center gap-1 border border-purple-600 text-purple-600 text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-50"
+    >
+      <Download size={16} />
+      Brochure
+    </button>
 
-          </div>
+    <button
+      onClick={(e) => e.preventDefault()}
+      className="flex items-center justify-center gap-1 bg-purple-600 text-white text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-700"
+    >
+      <Phone size={16} />
+      Enquire
+    </button>
+
+  </div>
+
+  {/* 🔥 Bottom Full Width Button */}
+  <button
+    onClick={() => navigate(`/property/${property.id}`)}
+    className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition"
+  >
+    View Details
+  </button>
+
+</div>
 
         </div>
 
       </div>
 
-    </Link>
+  
 
   );
 }

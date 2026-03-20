@@ -4,6 +4,9 @@ import Residential from "./pages/Residential";
 import ResidentialSection from "./components/ResidentialSection";
 import PropertyDetails from "./pages/PropertyDetails";
 import PropDetails from "./pages/PropDetails";
+import NewPage from "./pages/NewPage";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,7 +20,8 @@ function App() {
 
         {/* Property Detail Page */}
         <Route path="/property/:id" element={<PropertyDetails />} />
-<Route path="/elysian-greens" element={<PropDetails />} />
+        <Route path="/elysian-greens" element={<PropDetails />} />
+        <Route path="/new-page" element={<NewPage />} />
       </Routes>
     </BrowserRouter>
   );
