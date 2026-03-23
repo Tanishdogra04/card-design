@@ -83,7 +83,7 @@ useEffect(() => {
   </div>
 
   {/* DATA DRIVEN CARDS */}
-  <div className="grid grid-cols-[repeat(auto-fit,minmax(0px,120px))] gap-3">
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
 
     {[
   { name: "Apartments", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
@@ -91,29 +91,29 @@ useEffect(() => {
   { name: "Independent Houses", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6" },
   { name: "Builder Floors", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" },
   { name: "Studio Apartments", img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" },
-  { name: "Row Houses", img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115" },
-  { name: "Serviced Apartments", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c" },
-  { name: "Co-living Spaces", img: "https://images.unsplash.com/photo-1554995207-c18c203602cb" },
-  { name: "Retirement Homes", img: "https://images.unsplash.com/photo-1586105251261-72a756497a11" },
-  { name: "Luxury Homes", img: "https://images.unsplash.com/photo-1613977257363-707ba9348227" },
+  // { name: "Row Houses", img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115" },
+  // { name: "Serviced Apartments", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c" },
+  // { name: "Co-living Spaces", img: "https://images.unsplash.com/photo-1554995207-c18c203602cb" },
+  // { name: "Retirement Homes", img: "https://images.unsplash.com/photo-1586105251261-72a756497a11" },
+  // { name: "Luxury Homes", img: "https://images.unsplash.com/photo-1613977257363-707ba9348227" },
 ].map((item, i) => (
 
-    <div
-      key={i}
-      className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
-    >
-      <img
-        src={item.img}
-        alt={item.name}
-        className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-      />
+   <div
+  key={i}
+  className="relative h-[160px] rounded-xl overflow-hidden cursor-pointer group"
+>
+  <img
+    src={item.img}
+    alt={item.name}
+    className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-300"
+  />
 
-      <div className="absolute inset-0 bg-black/30"></div>
+  <div className="absolute inset-0 bg-black/30"></div>
 
-      <h3 className="absolute bottom-2 left-2 text-white text-s font-semibold">
-        {item.name}
-      </h3>
-    </div>
+  <h3 className="absolute bottom-2 left-2 text-white text-base font-semibold">
+    {item.name}
+  </h3>
+</div>
 
   ))}
 
@@ -125,7 +125,6 @@ useEffect(() => {
       <FilterSection 
   filters={filters} 
   setFilters={setFilters} 
-  isSticky={isSticky}
 />
 
 <div ref={triggerRef}></div>
