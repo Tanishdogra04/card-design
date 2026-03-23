@@ -110,7 +110,7 @@ useEffect(() => {
 
   <div className="absolute inset-0 bg-black/30"></div>
 
-  <h3 className="absolute bottom-2 left-2 text-white text-base font-semibold">
+  <h3 className="absolute bottom-2 left-2 text-white text-xl font-semibold">
     {item.name}
   </h3>
 </div>
