@@ -92,10 +92,52 @@ export default function ResidentialSection() {
 
 <Link
   to="/new-page"
-  className="mt-2 w-full border border-purple-600 text-purple-600 py-2 rounded-lg text-sm font-medium hover:bg-purple-50 transition text-center"
+  className="mt-2 w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition text-center"
 >
   New Page
 </Link>
+{/* <Link
+  to="/properties"
+  className="mt-2 w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-2 rounded-lg text-sm font-semibold hover:scale-[1.02] hover:shadow-lg transition-all duration-200 text-center"
+>
+  View Properties
+</Link>
+<Link
+  to="/invest"
+  className="mt-2 w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-md hover:-translate-y-[1px] transition-all text-center"
+>
+  Invest Now
+</Link>
+<Link
+  to="/luxury"
+  className="mt-2 w-full bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-2 rounded-lg text-sm font-semibold hover:brightness-110 transition text-center"
+>
+  Luxury Homes
+</Link>
+<Link
+  to="/contact"
+  className="mt-2 w-full bg-gradient-to-r from-gray-900 to-gray-700 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-xl hover:scale-[1.02] transition-all text-center"
+>
+  Get Consultation
+</Link>
+<Link
+  to="/visit"
+  className="mt-2 w-full bg-gradient-to-r from-rose-500 to-red-600 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-md hover:opacity-95 transition text-center"
+>
+  Book Site Visit
+</Link>
+<Link
+  to="/explore"
+  className="mt-2 w-full bg-white/10 backdrop-blur-md border border-white/20 text-white py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition text-center"
+>
+  Explore Listings
+</Link>
+<Link
+  to="/find-homes"
+  className="mt-2 w-full bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a] text-gray-900 py-2 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg hover:brightness-105 transition-all text-center"
+>
+  Find Homes
+</Link> */}
 
         </div>
 

@@ -211,10 +211,16 @@ const FilterSection = ({ filters, setFilters, isSticky }) => {
         </button>
 
         <button
-          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
-        >
-          Apply
-        </button>
+  className="bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a]
+             border border-[#5fae4a] 
+             text-gray-900 font-semibold 
+             px-4 py-2 rounded-lg 
+             shadow-sm hover:shadow-md 
+             hover:brightness-105 
+             transition duration-300"
+>
+  Apply
+</button>
 
       </div>
     </section>

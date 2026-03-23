@@ -73,7 +73,7 @@ useEffect(() => {
       Browse by Type
     </h2>
 
-    <button className="group flex items-center gap-2 text-purple-600 text-sm font-medium border border-purple-600 px-4 py-2 rounded hover:bg-purple-50 transition">
+    <button className="group flex items-center gap-2 bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a] text-sm font-medium border border-[#5fae4a] px-4 py-2 rounded hover:bg-purple-50 transition">
       View All
       <ArrowRight
         size={18}
@@ -83,45 +83,40 @@ useEffect(() => {
   </div>
 
   {/* DATA DRIVEN CARDS */}
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+  <div className="grid grid-cols-[repeat(auto-fit,minmax(0px,120px))] gap-3">
 
     {[
-      {
-        name: "Apartments",
-        img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
-      },
-      {
-        name: "Villas",
-        img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-      },
-      {
-        name: "Plots",
-        img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-      },
-      {
-        name: "Independent Houses",
-        img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6",
-      },
-    ].map((item, i) => (
+  { name: "Apartments", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
+  { name: "Villas", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" },
+  { name: "Independent Houses", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6" },
+  { name: "Builder Floors", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" },
+  { name: "Studio Apartments", img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" },
+  { name: "Row Houses", img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115" },
+  { name: "Serviced Apartments", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c" },
+  { name: "Co-living Spaces", img: "https://images.unsplash.com/photo-1554995207-c18c203602cb" },
+  { name: "Retirement Homes", img: "https://images.unsplash.com/photo-1586105251261-72a756497a11" },
+  { name: "Luxury Homes", img: "https://images.unsplash.com/photo-1613977257363-707ba9348227" },
+].map((item, i) => (
 
-      <div
-        key={i}
-        className="relative rounded-xl overflow-hidden cursor-pointer group"
-      >
-        <img
-          src={item.img}
-          alt={item.name}
-          className="w-full h-[120px] md:h-[160px] object-cover group-hover:scale-110 transition duration-300"
-        />
+    <div
+      key={i}
+      className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+    >
+      <img
+        src={item.img}
+        alt={item.name}
+        className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+      />
 
-        <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
-        <h3 className="absolute bottom-3 left-3 text-white font-semibold text-sm md:text-base">
-          {item.name}
-        </h3>
-      </div>
+      <h3 className="absolute bottom-2 left-2 text-white text-s font-semibold">
+        {item.name}
+      </h3>
+    </div>
 
-    ))}
+  ))}
+
 
   </div>
 </section>
