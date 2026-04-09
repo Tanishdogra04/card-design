@@ -66,12 +66,12 @@ export default function Residential() {
         />
       )}
 
-      <div className="grid md:grid-cols-3 gap-6">
-
+      <div className="grid md:grid-cols-3 gap-6 items-stretch">
         {filteredProperties.map((property) => (
-          <PropertyCard key={property.id} property={property}/>
+          <div key={property.id} className="h-full flex">
+            <PropertyCard property={property}/>
+          </div>
         ))}
-
       </div>
 
     </div>

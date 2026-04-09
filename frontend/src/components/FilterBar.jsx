@@ -136,7 +136,7 @@ export default function FilterBar({ filters, setFilters, openAdvanced }) {
       {/* MORE */}
       <button
         onClick={openAdvanced}
-        className="border rounded-full px-4 py-2 text-sm hover:border-purple-500"
+        className="border rounded-full px-4 py-2 text-sm hover:border-blue-500"
       >
         More
       </button>
@@ -144,7 +144,7 @@ export default function FilterBar({ filters, setFilters, openAdvanced }) {
       {/* CLEAR */}
       <button
         onClick={clearFilters}
-        className="ml-auto text-sm text-purple-600"
+        className="ml-auto text-sm text-blue-700"
       >
         Clear
       </button>

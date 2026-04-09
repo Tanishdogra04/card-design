@@ -37,14 +37,14 @@ export default function ResidentialSection() {
     <>
     <section className="py-16 px-10 bg-gray-50">
 
-      <div className="flex gap-6 items-start">
+      <div className="flex gap-6 items-stretch">
 
         {/* LEFT CARD */}
-        <div className="w-[300px] flex-shrink-0 bg-gradient-to-br min-h-[400px] from-purple-50 to-white rounded-xl p-5 shadow-sm border border-purple-100 flex flex-col">
+        <div className="w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 shadow-sm border border-blue-100 flex flex-col">
 
           <div>
 
-            <div className="flex gap-2 mb-3 text-purple-600">
+            <div className="flex gap-2 mb-3 text-blue-700">
               <Building2 size={26}/>
               <Home size={26}/>
             </div>
@@ -60,22 +60,22 @@ export default function ResidentialSection() {
             <div className="mt-3 space-y-2 text-sm text-gray-700">
 
               <div className="flex items-center gap-2">
-                <ShieldCheck size={18} className="text-purple-600"/>
+                <ShieldCheck size={18} className="text-blue-700"/>
                 Verified Listings
               </div>
 
               <div className="flex items-center gap-2">
-                <FileCheck size={18} className="text-purple-600"/>
+                <FileCheck size={18} className="text-blue-700"/>
                 RERA Approved Projects
               </div>
 
               <div className="flex items-center gap-2">
-                <Building2 size={18} className="text-purple-600"/>
+                <Building2 size={18} className="text-blue-700"/>
                 Trusted Developers
               </div>
 
               <div className="flex items-center gap-2">
-                <BadgeDollarSign size={18} className="text-purple-600"/>
+                <BadgeDollarSign size={18} className="text-blue-700"/>
                 Best Price Assurance
               </div>
 
@@ -83,19 +83,21 @@ export default function ResidentialSection() {
 
           </div>
 
-          <Link
-  to="/residential"
-  className="mt-4 w-full bg-purple-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition text-center"
->
-  Explore Properties →
-</Link>
+          <div className="mt-auto flex flex-col gap-2">
+            <Link
+              to="/residential"
+              className="w-full bg-blue-700 text-white py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition text-center"
+            >
+              Explore Properties →
+            </Link>
 
-<Link
-  to="/new-page"
-  className="mt-2 w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition text-center"
->
-  New Page
-</Link>
+            <Link
+              to="/new-page"
+              className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition text-center"
+            >
+              New Page
+            </Link>
+          </div>
 {/* <Link
   to="/properties"
   className="mt-2 w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-2 rounded-lg text-sm font-semibold hover:scale-[1.02] hover:shadow-lg transition-all duration-200 text-center"

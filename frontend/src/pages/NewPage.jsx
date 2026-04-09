@@ -1,11 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import NewPropertyCard from "../components/NewPropertyCard";
-import data from "../data/newdataproperty.json";
+import BuilderFloorCard from "../components/BuilderFloorCard";
 import FilterSection from "../components/FilterSection";
+import { Link } from "react-router-dom";
+import data from "../data/newdataproperty.json";
+
+const CATEGORY_CARDS = [
+  { name: "Apartments", filterType: "Apartment", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
+  { name: "Villas", filterType: "Villa", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" },
+  { name: "Independent Houses", filterType: "Independent House", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6" },
+  { name: "Builder Floors", filterType: "Builder Floor", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" },
+  { name: "Studio Apartments", filterType: "Studio", img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" },
+];
 
 const NewPage = () => {
-
   
   const [filters, setFilters] = useState({
     location: "",
@@ -73,33 +82,32 @@ useEffect(() => {
       Browse by Type
     </h2>
 
-    <button className="group flex items-center gap-2 bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a] text-sm font-medium border border-[#5fae4a] px-4 py-2 rounded hover:bg-purple-50 transition">
+    <Link 
+      to="/explore-types" 
+      className="group flex items-center gap-2 bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a] text-sm font-medium border border-[#5fae4a] px-4 py-2 rounded hover:bg-purple-50 transition">
       View All
       <ArrowRight
         size={18}
         className="transition-transform duration-500 group-hover:rotate-[360deg]"
       />
-    </button>
+    </Link>
   </div>
 
   {/* DATA DRIVEN CARDS */}
   <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6">
 
-    {[
-  { name: "Apartments", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
-  { name: "Villas", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" },
-  { name: "Independent Houses", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6" },
-  { name: "Builder Floors", img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" },
-  { name: "Studio Apartments", img: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" },
-  // { name: "Row Houses", img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115" },
-  // { name: "Serviced Apartments", img: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c" },
-  // { name: "Co-living Spaces", img: "https://images.unsplash.com/photo-1554995207-c18c203602cb" },
-  // { name: "Retirement Homes", img: "https://images.unsplash.com/photo-1586105251261-72a756497a11" },
-  // { name: "Luxury Homes", img: "https://images.unsplash.com/photo-1613977257363-707ba9348227" },
-].map((item, i) => (
+    {CATEGORY_CARDS.map((item, i) => (
 
    <div
   key={i}
+  onClick={() => {
+    setFilters(prev => ({
+      ...prev, 
+      type: item.filterType === "Studio" ? "" : item.filterType,
+      bhk: item.filterType === "Studio" ? "Studio" : prev.bhk
+    }));
+    document.getElementById("property-list")?.scrollIntoView({ behavior: "smooth" });
+  }}
   className="relative h-[160px] rounded-xl overflow-hidden cursor-pointer group"
 >
   <img
@@ -129,19 +137,25 @@ useEffect(() => {
 
 <div ref={triggerRef}></div>
       {/* Property Cards */}
-      <section className="px-4 sm:px-6 md:px-10 pb-10">
+      <section id="property-list" className="px-4 sm:px-6 md:px-10 pb-10">
         <h2 className="text-lg md:text-xl font-semibold mb-6">
           Available Properties
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
          {filteredData.length === 0 ? (
   <p className="col-span-full text-center text-gray-500">
     No properties found 😔
   </p>
 ) : (
   filteredData.map((property) => (
-    <NewPropertyCard key={property.id} property={property} />
+    <div key={property.id} className="h-full flex">
+      {property.type === "Builder Floor" ? (
+        <BuilderFloorCard property={property} />
+      ) : (
+        <NewPropertyCard property={property} />
+      )}
+    </div>
   ))
 )}
         </div>

@@ -1,77 +1,55 @@
-import React from "react";
-import { MapPin, ParkingCircle, Route } from "lucide-react";
+import { Route, ShieldCheck, MapPin, Sparkles } from "lucide-react";
 
-const HighlightsSection = () => {
+const HighlightsSection = ({ property }) => {
+  const highlights = [
+    {
+      title: "Premium Infrastructure",
+      desc: "Wide internal roads and thoughtfully planned layouts for optimal living.",
+      icon: <Route size={32} />
+    },
+    {
+      title: property?.type === "Plot" ? "Secure Investment" : "Modern Amenities",
+      desc: property?.type === "Plot" 
+        ? "Excellent ROI potential in a rapidly developing sector." 
+        : "State-of-the-art facilities including parks, gym, and security.",
+      icon: <Sparkles size={32} />
+    },
+    {
+      title: "Prime Location",
+      desc: `Strategically located in ${property?.location || "prime area"} with excellent connectivity.`,
+      icon: <MapPin size={32} />
+    }
+  ];
+
   return (
-    <section className="py-16 bg-gray-100">
+    <section id="highlights" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        <div className="text-center mb-16">
+          <p className="text-blue-700 text-xs font-black uppercase tracking-[4px] mb-3">Core Value</p>
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+            {property?.name} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-600">Highlights</span>
+          </h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-blue-700 to-blue-500 mx-auto mt-6 rounded-full"></div>
+        </div>
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
-
-        {/* HEADING */}
-        <h2 className="text-3xl font-semibold mb-10">
-          Velora Midtown Patiala Highway
-        </h2>
-
-        {/* CARDS */}
         <div className="grid md:grid-cols-3 gap-8">
-
-          {/* CARD 1 */}
-          <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition">
-
-  <div className="flex justify-center mb-4 text-pink-600 text-3xl">
-    <i className="fas fa-road"></i>
-  </div>
-
-  <h3 className="text-lg font-semibold mb-2">
-    60Ft-40Ft Internal Roads
-  </h3>
-
-  <p className="text-gray-600 text-sm leading-6">
-    Enjoy Living in a premium Township with wide Roads, Green Spaces,
-    Ample Sun, Breeze and Sky.
-  </p>
-
-</div>
-
-          {/* CARD 2 */}
-          <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition">
-
-  <div className="flex justify-center mb-4 text-pink-600 text-4xl">
-    <i className="fas fa-parking"></i>
-  </div>
-
-  <h3 className="text-lg font-semibold mb-2">
-    7 Acre Green Park
-  </h3>
-
-  <p className="text-gray-600 text-sm leading-6">
-    7 Acre Green Spaces with Fitness, Activity, Sports Arena and Elderly Park
-  </p>
-
-</div>
-
-          {/* CARD 3 */}
-          <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-xl transition">
-
-  <div className="flex justify-center mb-4 text-pink-600 text-4xl">
-    <i className="fas fa-map-marker-alt"></i>
-  </div>
-
-  <h3 className="text-lg font-semibold mb-2">
-    Premium Location
-  </h3>
-
-  <p className="text-gray-600 text-sm leading-6">
-    Prime located on Zirakpur Patiala Highway and just 15 mins to
-    International Airport Chandigarh
-  </p>
-
-</div>
-
+          {highlights.map((item, idx) => (
+            <div key={idx} className="bg-white rounded-[2.5rem] shadow-xl p-10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border border-gray-100 group">
+              <div className="w-16 h-16 rounded-3xl bg-blue-50 flex items-center justify-center text-blue-700 mb-8 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-4 tracking-tight">
+                {item.title}
+              </h3>
+              <p className="text-gray-500 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </div>
 
       </div>
-
     </section>
   );
 };

@@ -4,7 +4,7 @@
     "name": "Prestige Lakeside Habitat",
     "developer": "Prestige Group",
     "location": "Bangalore",
-    "rera": "PRM/KA/RERA/1251",
+    "rera": "PRM/RERA/1251",
     "price": 8500000,
     "badge": "New Launch",
     "type": "Apartment",
@@ -23,7 +23,7 @@
     "name": "Godrej Woodland",
     "developer": "Godrej Properties",
     "location": "Chandigarh",
-    "rera": "PRM/KA/RERA/1252",
+    "rera": "PRM/RERA/1252",
     "price": 6500000,
     "badge": "Ready to Move",
     "type": "Villa",
@@ -41,7 +41,7 @@
     "name": "Brigade Cornerstone",
     "developer": "Brigade Group",
     "location": "Noida",
-    "rera": "PRM/KA/RERA/1253",
+    "rera": "PRM/RERA/1253",
     "price": 7200000,
     "badge": "Under Construction",
     "type": "Apartment",
@@ -59,7 +59,7 @@
     "name": "Sobha Dream Acres",
     "developer": "Sobha Ltd",
     "location": "Kasauali, Himachal Pradesh",
-    "rera": "PRM/KA/RERA/1254",
+    "rera": "PRM/RERA/1254",
     "price": 5800000,
     "badge": "Affordable",
     "type": "Apartment",
@@ -74,10 +74,27 @@
   },
   {
     "id": 5,
+    "name": "Eco City Plots",
+    "developer": "GMADA",
+    "location": "New Chandigarh",
+    "rera": "Approved",
+    "price": 4500000,
+    "badge": "Limited Edition",
+    "type": "Plot",
+    "configuration": "Residential Plot",
+    "area": "150 sq.yd",
+    "facing": "North",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1"
+    ]
+  },
+  {
+    "id": 6,
     "name": "Purva Palm Beach",
     "developer": "Puravankara Ltd",
     "location": "Goa",
-    "rera": "PRM/KA/RERA/1255",
+    "rera": "PRM/RERA/1255",
     "price": 9000000,
     "badge": "New Launch",
     "type": "Apartment",
@@ -87,6 +104,174 @@
     "images": [
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
       "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Luxury Stilt+4 Floor",
+    "developer": "Aditya Builders",
+    "location": "DLF Phase 2, Gurgaon",
+    "rera": "GGM/RERA/2022/99",
+    "price": 12500000,
+    "badge": "Ready to Move",
+    "type": "Builder Floor",
+    "configuration": "4 BHK",
+    "area": "2500 sq.ft",
+    "carpetArea": "2100 sq.ft",
+    "facing": "North-East",
+    "furnishing": "Semi-Furnished",
+    "floorNumber": "2nd",
+    "parking": "2 Covered",
+    "ownership": "Freehold",
+    "images": [
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Smart Independence Floor",
+    "developer": "Sikka Group",
+    "location": "Sector 150, Noida",
+    "rera": "Awaited",
+    "price": 8800000,
+    "badge": "New Launch",
+    "type": "Builder Floor",
+    "configuration": "3 BHK",
+    "area": "1800 sq.ft",
+    "carpetArea": "1550 sq.ft",
+    "facing": "West",
+    "furnishing": "Unfurnished",
+    "floorNumber": "1st",
+    "parking": "1 Covered",
+    "ownership": "Freehold",
+    "images": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Elite Ground Floor",
+    "developer": "M3M India",
+    "location": "Sector 65, Gurgaon",
+    "rera": "GGM/RERA/2021/04",
+    "price": 14500000,
+    "badge": "Under Construction",
+    "type": "Builder Floor",
+    "configuration": "4 BHK",
+    "area": "3000 sq.ft",
+    "carpetArea": "2600 sq.ft",
+    "facing": "East",
+    "furnishing": "Semi-Furnished",
+    "floorNumber": "Ground",
+    "parking": "1 Covered",
+    "ownership": "Leasehold",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "https://images.unsplash.com/photo-1541123223192-36c5332c86b2"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Velora Premium Plots",
+    "developer": "Omaxe Group",
+    "location": "Mohali, Punjab",
+    "rera": "PBRERA-SAS80-PR0394",
+    "price": 4500000,
+    "badge": "New Launch",
+    "type": "Plot",
+    "configuration": "Residential Plot",
+    "area": "144 sq.yd",
+    "facing": "North",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Riverview Estate Plots",
+    "developer": "ATS Greens",
+    "location": "Sector 150, Noida",
+    "rera": "UPRERAPRJ1234",
+    "price": 8500000,
+    "badge": "Ready to Move",
+    "type": "Plot",
+    "configuration": "Residential Plot",
+    "area": "250 sq.yd",
+    "facing": "East",
+    "images": [
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Antara Senior Living",
+    "developer": "Max Group",
+    "location": "Sector 150, Noida",
+    "rera": "UPRERAPRJ6677",
+    "price": 18500000,
+    "badge": "Luxury Retirement",
+    "type": "Senior Living",
+    "configuration": "2 BHK",
+    "area": "1200 sq.ft",
+    "facing": "East",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1586105251261-72a756497a11",
+      "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Suvidha Senior Village",
+    "developer": "Suvidha Retirement Homes",
+    "location": "Bannerghatta, Bangalore",
+    "rera": "PRM/RERA/4455",
+    "price": 7500000,
+    "badge": "Ready to Move",
+    "type": "Senior Living",
+    "configuration": "1 BHK",
+    "area": "900 sq.ft",
+    "facing": "North",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5",
+      "https://images.unsplash.com/photo-1586105251261-72a756497a11"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Gaur City Mall Shops",
+    "developer": "Gaursons",
+    "location": "Greater Noida West",
+    "rera": "UPRERAPRJ5544",
+    "price": 5500000,
+    "badge": "Leased Out",
+    "type": "Commercial",
+    "configuration": "Retail Shop",
+    "area": "450 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bhutani Alphabet",
+    "developer": "Bhutani Infra",
+    "location": "Sector 90, Noida",
+    "rera": "UPRERAPRJ8899",
+    "price": 6500000,
+    "badge": "Pre-Leased",
+    "type": "Commercial",
+    "configuration": "Office Space",
+    "area": "600 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2"
     ]
   }
 ]

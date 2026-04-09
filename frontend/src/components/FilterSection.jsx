@@ -83,7 +83,7 @@ const FilterSection = ({ filters, setFilters, isSticky }) => {
                 handleChange(key, item);
                 setOpenDropdown(null);
               }}
-              className="px-3 py-2 text-sm hover:bg-purple-50 cursor-pointer"
+              className="px-3 py-2 text-sm hover:bg-blue-50 cursor-pointer"
             >
               {item}
             </div>
@@ -168,28 +168,15 @@ const FilterSection = ({ filters, setFilters, isSticky }) => {
   return (
     <section
       ref={dropdownRef}
-      className={`px-4 sm:px-6 md:px-10 mb-6 transition-all duration-300 ${
-        isSticky
-          ? "md:fixed md:top-0 md:left-0 md:w-full md:z-50 md:bg-white md:shadow-md"
-          : "relative"
-      }`}
+      className="px-4 sm:px-6 md:px-10 mb-6 relative py-0"
     >
 
       {/* HEADING */}
-      <h2 className={`text-lg font-semibold mb-3 ${
-        isSticky ? "md:hidden" : ""
-      }`}>
+      <h2 className="text-lg font-semibold mb-3">
         Quick Filters
       </h2>
 
-      <div className="bg-white p-4 rounded-xl shadow flex flex-wrap items-center gap-3">
-
-        {/* Sticky Label */}
-        {isSticky && (
-          <span className="hidden md:block text-sm font-medium text-gray-700">
-            Filter:
-          </span>
-        )}
+      <div className="bg-white p-4 rounded-xl shadow flex flex-wrap items-center gap-3 border border-gray-100">
 
         {/* DROPDOWNS */}
         {renderDropdown("location", "Location")}
@@ -205,22 +192,10 @@ const FilterSection = ({ filters, setFilters, isSticky }) => {
         {/* BUTTONS */}
         <button
           onClick={handleClear}
-          className="border px-4 py-2 rounded hover:bg-gray-100"
+          className="ml-auto text-sm font-black text-gray-400 hover:text-blue-700 uppercase tracking-widest transition-colors"
         >
-          Clear
+          Reset
         </button>
-
-        <button
-  className="bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a]
-             border border-[#5fae4a] 
-             text-gray-900 font-semibold 
-             px-4 py-2 rounded-lg 
-             shadow-sm hover:shadow-md 
-             hover:brightness-105 
-             transition duration-300"
->
-  Apply
-</button>
 
       </div>
     </section>

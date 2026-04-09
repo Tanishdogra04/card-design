@@ -51,7 +51,7 @@ const PlotDetails = () => {
       </p>
 
       {/* BUTTON */}
-      <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition flex items-center gap-2">
+      <button className="bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition flex items-center gap-2">
         ✉ Enquire Now
       </button>
 

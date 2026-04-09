@@ -63,7 +63,7 @@ export default function FilterModal({ close, filters, setFilters }) {
                 onClick={() => setTab(item)}
                 className={`cursor-pointer p-2 rounded-md ${
                   tab === item
-                    ? "bg-purple-100 text-purple-600"
+                    ? "bg-blue-100 text-blue-700"
                     : "hover:bg-gray-100"
                 }`}
               >
@@ -215,7 +215,7 @@ export default function FilterModal({ close, filters, setFilters }) {
 
           <button
             onClick={close}
-            className="bg-purple-600 text-white px-6 py-2 rounded-md hover:bg-purple-700"
+            className="bg-blue-700 text-white px-6 py-2 rounded-md hover:bg-blue-800"
           >
             Apply
           </button>

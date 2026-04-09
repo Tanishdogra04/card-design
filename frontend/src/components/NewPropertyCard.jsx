@@ -57,20 +57,22 @@ const navigate = useNavigate();
 
    
 
-     <div className="bg-white rounded-xl shadow-md overflow-hidden w-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+     <div className="bg-white rounded-[1.5rem] shadow-xl shadow-slate-900/[0.05] border border-slate-200/60 overflow-hidden w-full h-full flex flex-col"
 >
 
         {/* IMAGE SECTION */}
-        <div className="relative h-[180px] sm:h-[200px]overflow-hidden">
+        <div className="relative h-[220px] overflow-hidden">
 
           <img
             src={images[index]}
             alt={property.name}
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
           />
 
           {/* BADGE */}
-          <div className="absolute top-3 left-3 bg-purple-600 text-white text-xs px-2 py-1 rounded-md">
+          <div className="absolute top-3 left-3 bg-blue-700 text-white text-xs px-2 py-1 rounded-md">
             {property.badge}
           </div>
 
@@ -136,18 +138,20 @@ const navigate = useNavigate();
         </div>
 
         {/* CONTENT */}
-        <div className="p-4 space-y-3">
+        <div className="p-4 space-y-3 flex-1 flex flex-col">
 
           {/* ROW 1 */}
           <div className="flex justify-between items-start">
 
-           <h3 className="font-semibold text-sm sm:text-base leading-snug">
+           <h3 className="font-bold text-gray-900 text-sm sm:text-base leading-snug truncate pr-2">
               {property.name}
             </h3>
 
-            <div className="flex items-center text-xs text-gray-500 gap-1">
+            <div className="flex items-center text-xs text-gray-500 gap-1 shrink-0">
               <MapPin size={14} />
-              {property.location.split(",")[0]}
+              <span className="truncate max-w-[80px] sm:max-w-[100px]">
+                {property.location.split(",")[0]}
+              </span>
             </div>
 
           </div>
@@ -158,7 +162,7 @@ const navigate = useNavigate();
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="group flex items-center gap-1 text-purple-600 font-medium text-xs"
+              className="group flex items-center gap-1 text-blue-700 font-medium text-xs"
             >
               {property.developer}
 
@@ -176,55 +180,54 @@ const navigate = useNavigate();
 
           </div>
 
-          {/* ROW 3 */}
-          <div className="grid grid-cols-3 text-xs text-gray-600 gap-3">
+          <div className="grid grid-cols-3 text-[10px] sm:text-xs text-gray-600 gap-2">
 
-            <div className="flex items-center gap-1">
-              <Building2 size={14} />
-              {property.configuration}
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Building2 size={14} className="shrink-0" />
+              <span className="truncate">{property.type === "Plot" ? "Residential" : property.configuration}</span>
             </div>
 
-            <div className="flex items-center gap-1">
-              <Ruler size={14} />
-              {property.area}
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Ruler size={14} className="shrink-0" />
+              <span className="truncate">{property.area}</span>
             </div>
 
-            <div className="flex items-center gap-1">
-              <Building2 size={14} />
-              {property.type}
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Building2 size={14} className="shrink-0" />
+              <span className="truncate">{property.type}</span>
             </div>
 
           </div>
 
           {/* ROW 4 */}
-          <div className="grid grid-cols-3 text-xs text-gray-600 gap-3">
+          <div className="grid grid-cols-3 text-[10px] sm:text-xs text-gray-600 gap-2">
 
-            <div className="flex items-center gap-1">
-              <Compass size={14} />
-              {property.facing || "East"}
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Compass size={14} className="shrink-0" />
+              <span className="truncate">{property.facing || "East"}</span>
             </div>
 
-            <div className="flex items-center gap-1">
-              <Building2 size={14} />
-              Parking
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Building2 size={14} className="shrink-0" />
+              <span className="truncate">{property.type === "Plot" ? "Gated" : "Parking"}</span>
             </div>
 
-            <div className="flex items-center gap-1">
-              <Building2 size={14} />
-              Gym
+            <div className="flex items-center gap-1 whitespace-nowrap">
+              <Building2 size={14} className="shrink-0" />
+              <span className="truncate">{property.type === "Plot" ? "Park" : "Gym"}</span>
             </div>
 
           </div>
 
           {/* CTA BUTTONS */}
-        <div className="flex flex-col gap-3 pt-2">
+        <div className="flex flex-col gap-3 pt-2 mt-auto">
 
   {/* Top Row */}
   <div className="flex gap-3">
 
     <button
       onClick={(e) => e.preventDefault()}
-      className="flex items-center justify-center gap-1 border border-purple-600 text-purple-600 text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-50"
+      className="flex items-center justify-center gap-1 border border-blue-700 text-blue-700 text-sm px-3 py-2 rounded-md flex-1 hover:bg-blue-50"
     >
       <Download size={16} />
       Brochure
@@ -232,7 +235,7 @@ const navigate = useNavigate();
 
     <button
       onClick={(e) => e.preventDefault()}
-      className="flex items-center justify-center gap-1 bg-purple-600 text-white text-sm px-3 py-2 rounded-md flex-1 hover:bg-purple-700"
+      className="flex items-center justify-center gap-1 bg-blue-700 text-white text-sm px-3 py-2 rounded-md flex-1 hover:bg-blue-800"
     >
       <Phone size={16} />
       Enquire
@@ -243,7 +246,7 @@ const navigate = useNavigate();
   {/* 🔥 Bottom Full Width Button */}
   <button
     onClick={() => navigate(`/property/${property.id}`)}
-    className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition"
+    className="w-full bg-blue-700 text-white py-2 rounded-md hover:bg-blue-800 transition"
   >
     View Details
   </button>
