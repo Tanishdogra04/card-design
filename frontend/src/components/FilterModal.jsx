@@ -29,9 +29,9 @@ export default function FilterModal({ close, filters, setFilters }) {
 
   return (
 
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 p-4">
 
-      <div className="bg-white w-[700px] rounded-xl shadow-lg">
+      <div className="bg-white w-full max-w-[700px] rounded-xl shadow-lg relative max-h-[90vh] flex flex-col overflow-hidden">
 
         {/* HEADER */}
 
@@ -50,18 +50,18 @@ export default function FilterModal({ close, filters, setFilters }) {
 
         </div>
 
-        <div className="flex h-[420px]">
+        <div className="flex flex-col sm:flex-row flex-1 min-h-0">
 
           {/* LEFT MENU */}
 
-          <div className="w-1/3 border-r p-4 space-y-3">
+          <div className="w-full sm:w-1/3 border-b sm:border-b-0 sm:border-r p-4 flex sm:flex-col gap-2 overflow-x-auto sm:overflow-x-visible no-scrollbar">
 
             {["Amenities", "Furnishing", "Ownership", "Posted By"].map(item => (
 
               <div
                 key={item}
                 onClick={() => setTab(item)}
-                className={`cursor-pointer p-2 rounded-md ${
+                className={`cursor-pointer p-2 rounded-md whitespace-nowrap sm:whitespace-normal ${
                   tab === item
                     ? "bg-blue-100 text-blue-700"
                     : "hover:bg-gray-100"
@@ -76,7 +76,7 @@ export default function FilterModal({ close, filters, setFilters }) {
 
           {/* RIGHT OPTIONS */}
 
-          <div className="w-2/3 p-6 overflow-y-auto">
+          <div className="flex-1 p-6 overflow-y-auto">
 
             {/* AMENITIES */}
 

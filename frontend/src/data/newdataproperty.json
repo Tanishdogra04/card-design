@@ -273,5 +273,117 @@
       "https://images.unsplash.com/photo-1497366216548-37526070297c",
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2"
     ]
+  },
+  {
+    "id": 16,
+    "name": "Emaar Business Precinct",
+    "developer": "Emaar India",
+    "location": "Sector 62, Gurgaon",
+    "rera": "GGM/RERA/2023/12",
+    "price": 12500000,
+    "badge": "New Launch",
+    "type": "Commercial",
+    "configuration": "Office Suite",
+    "area": "1200 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "M3M Broadway",
+    "developer": "M3M India",
+    "location": "Sector 71, Gurgaon",
+    "rera": "GGM/RERA/2022/44",
+    "price": 8500000,
+    "badge": "Ready to Move",
+    "type": "Commercial",
+    "configuration": "Showroom",
+    "area": "800 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1560179707-f14e90ef3623"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Omaxe Corner SCO",
+    "developer": "Omaxe Group",
+    "location": "New Chandigarh",
+    "rera": "PBRERA-SAS80-PR0455",
+    "price": 12000000,
+    "badge": "New Launch",
+    "type": "Commercial",
+    "configuration": "Corner SCO Units",
+    "area": "1500 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Elante Food Court",
+    "developer": "Nexus Malls",
+    "location": "Chandigarh",
+    "rera": "Approved",
+    "price": 8500000,
+    "badge": "Ready to Move",
+    "type": "Commercial",
+    "configuration": "Food Court Space",
+    "area": "500 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Cyber Hub IT Park",
+    "developer": "DLF",
+    "location": "Gurgaon",
+    "rera": "GGM/RERA/2021/88",
+    "price": 25000000,
+    "badge": "Pre-Leased",
+    "type": "Commercial",
+    "configuration": "IT Park",
+    "area": "5000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Galleria High Street",
+    "developer": "Unitech",
+    "location": "Gurgaon",
+    "rera": "Completed",
+    "price": 15000000,
+    "badge": "Ready to Move",
+    "type": "Commercial",
+    "configuration": "High Street Shops",
+    "area": "800 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1555421689-491a97ff2040",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Aero City Office Suites",
+    "developer": "GMR",
+    "location": "Delhi",
+    "rera": "DLRERA/2022/12",
+    "price": 9500000,
+    "badge": "Under Construction",
+    "type": "Commercial",
+    "configuration": "Upper Floor Office Units",
+    "area": "1200 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+    ]
   }
 ]

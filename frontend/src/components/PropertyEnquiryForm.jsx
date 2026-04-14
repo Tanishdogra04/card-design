@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { User, Phone, Mail, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
-export default function PropertyEnquiryForm({ property }) {
+export default function PropertyEnquiryForm({ property, variant = "dark", className = "" }) {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+
+  const isLight = variant === "light";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,18 +65,22 @@ export default function PropertyEnquiryForm({ property }) {
       )}
 
       <div
-        className="w-[360px] bg-white/10 backdrop-blur-2xl p-8 rounded-[2rem] shadow-2xl border border-white/20 relative overflow-hidden"
+        className={`w-full ${!className && "md:w-[360px]"} ${isLight ? "bg-transparent" : "bg-white/10 backdrop-blur-2xl"} p-8 rounded-[2rem] relative overflow-hidden ${className}`}
       >
-        {/* Abstract Background Glow */}
-        <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/20 blur-[80px] rounded-full"></div>
-        <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-600/20 blur-[80px] rounded-full"></div>
+        {/* Abstract Background Glow (only for dark mode) */}
+        {!isLight && (
+          <>
+            <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/20 blur-[80px] rounded-full"></div>
+            <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-600/20 blur-[80px] rounded-full"></div>
+          </>
+        )}
 
         {/* TITLE */}
         <div className="relative z-10 mb-8 text-center">
-            <h2 className="text-white text-3xl font-black tracking-tight leading-none mb-2 uppercase italic">
+            <h2 className={`${isLight ? "text-slate-900" : "text-white"} text-3xl font-black tracking-tight leading-none mb-2 uppercase italic`}>
               {property?.name ? "Enquire Now" : "Ready to See?"}
             </h2>
-            <p className="text-blue-300 text-xs font-bold uppercase tracking-[3px]">
+            <p className={`${isLight ? "text-indigo-600" : "text-blue-300"} text-xs font-bold uppercase tracking-[3px]`}>
               {property?.name ? property.name : "Book Your Visit Now"}
             </p>
         </div>
@@ -82,45 +88,45 @@ export default function PropertyEnquiryForm({ property }) {
         {/* FORM */}
         <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-5">
           <div className="relative group">
-            <label className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-blue-300 transition-colors">
+            <label className={`absolute left-4 top-1/2 -translate-y-1/2 ${isLight ? "text-slate-400" : "text-white/50"} group-focus-within:text-blue-500 transition-colors`}>
               <User size={18} />
             </label>
             <input
               name="name"
               type="text"
               placeholder="Full Name"
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 focus:border-blue-400 focus:bg-white/10 outline-none text-white text-sm font-medium transition-all placeholder:text-white/30"
+              className={`w-full pl-12 pr-4 py-3.5 rounded-2xl ${isLight ? "bg-slate-50 border-slate-200 text-slate-900 focus:bg-white" : "bg-white/5 border-white/10 text-white focus:bg-white/10"} border focus:border-blue-400 outline-none text-sm font-medium transition-all placeholder:text-slate-400`}
             />
           </div>
 
           <div className="relative group">
-            <label className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-blue-300 transition-colors">
+            <label className={`absolute left-4 top-1/2 -translate-y-1/2 ${isLight ? "text-slate-400" : "text-white/50"} group-focus-within:text-blue-500 transition-colors`}>
               <Phone size={18} />
             </label>
             <input
               name="phone"
               type="tel"
               placeholder="Phone Number"
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 focus:border-blue-400 focus:bg-white/10 outline-none text-white text-sm font-medium transition-all placeholder:text-white/30"
+              className={`w-full pl-12 pr-4 py-3.5 rounded-2xl ${isLight ? "bg-slate-50 border-slate-200 text-slate-900 focus:bg-white" : "bg-white/5 border-white/10 text-white focus:bg-white/10"} border focus:border-blue-400 outline-none text-sm font-medium transition-all placeholder:text-slate-400`}
             />
           </div>
 
           <div className="relative group">
-            <label className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-blue-300 transition-colors">
+            <label className={`absolute left-4 top-1/2 -translate-y-1/2 ${isLight ? "text-slate-400" : "text-white/50"} group-focus-within:text-blue-500 transition-colors`}>
               <Mail size={18} />
             </label>
             <input
               name="email"
               type="email"
               placeholder="Email (Optional)"
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/5 border border-white/10 focus:border-blue-400 focus:bg-white/10 outline-none text-white text-sm font-medium transition-all placeholder:text-white/30"
+              className={`w-full pl-12 pr-4 py-3.5 rounded-2xl ${isLight ? "bg-slate-50 border-slate-200 text-slate-900 focus:bg-white" : "bg-white/5 border-white/10 text-white focus:bg-white/10"} border focus:border-blue-400 outline-none text-sm font-medium transition-all placeholder:text-slate-400`}
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="mt-4 bg-white text-blue-900 py-4 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl hover:bg-blue-50 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2 group"
+            className={`mt-4 ${isLight ? "bg-slate-900 text-white hover:bg-indigo-700" : "bg-white text-blue-900 hover:bg-blue-50"} py-4 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2 group`}
           >
             {loading ? (
                 "Processing..."
@@ -131,7 +137,7 @@ export default function PropertyEnquiryForm({ property }) {
                 </>
             )}
           </button>
-          <p className="text-[10px] text-center text-white/40 font-medium">
+          <p className={`text-[10px] text-center ${isLight ? "text-slate-400" : "text-white/40"} font-medium`}>
             We'll send the site visit details to your phone.
           </p>
         </form>

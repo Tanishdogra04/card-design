@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import NewPropertyCard from "../components/NewPropertyCard";
 import BuilderFloorCard from "../components/BuilderFloorCard";
 import FilterSection from "../components/FilterSection";
+import ExploreHeader from "../components/ExploreHeader";
 import { Link } from "react-router-dom";
 import data from "../data/newdataproperty.json";
 
@@ -58,6 +59,8 @@ useEffect(() => {
 
       {/* Banner */}
       <section className="relative h-[220px] sm:h-[260px] md:h-[320px]">
+        <ExploreHeader />
+        
         <img
           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
           alt="Residential"

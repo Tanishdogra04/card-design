@@ -7,15 +7,16 @@ import {
   FileCheck,
   Building2,
   BadgeDollarSign,
-  Home,
+  ShoppingBag,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Briefcase
 } from "lucide-react";
 
 import { useRef } from "react";
 
 
-export default function ResidentialSection() {
+export default function CommercialSection() {
 
   const scrollRef = useRef(null);
 
@@ -33,9 +34,12 @@ export default function ResidentialSection() {
     });
   };
 
+  // Filter for Commercial properties
+  const commercialProps = properties.filter(p => p.type === "Commercial");
+
   return (
     <>
-    <section className="pt-16 pb-6 px-6 md:px-10 bg-gray-50">
+    <section className="pt-6 pb-16 px-6 md:px-10 bg-gray-50 border-t border-gray-200">
 
       <div className="flex flex-col lg:flex-row gap-6 items-stretch">
 
@@ -46,37 +50,37 @@ export default function ResidentialSection() {
 
             <div className="flex gap-2 mb-3 text-blue-700">
               <Building2 size={26}/>
-              <Home size={26}/>
+              <Briefcase size={26}/>
             </div>
 
             <h3 className="text-lg font-semibold text-gray-800">
-              Residential Properties
+              Commercial Properties
             </h3>
 
             <p className="text-sm text-gray-500 mt-2 leading-relaxed">
-              Explore apartments, villas and plots from verified developers across top locations.
+              Find premium office spaces, retail shops and commercial plots for your business.
             </p>
 
             <div className="mt-3 space-y-2 text-sm text-gray-700">
 
               <div className="flex items-center gap-2">
                 <ShieldCheck size={18} className="text-blue-700"/>
-                Verified Listings
+                Prime Locations
               </div>
 
               <div className="flex items-center gap-2">
                 <FileCheck size={18} className="text-blue-700"/>
-                RERA Approved Projects
+                High ROI Projects
               </div>
 
               <div className="flex items-center gap-2">
                 <Building2 size={18} className="text-blue-700"/>
-                Trusted Developers
+                Grade-A Developers
               </div>
 
               <div className="flex items-center gap-2">
                 <BadgeDollarSign size={18} className="text-blue-700"/>
-                Best Price Assurance
+                Flexible Payment Plans
               </div>
 
             </div>
@@ -85,61 +89,19 @@ export default function ResidentialSection() {
 
           <div className="mt-auto flex flex-col gap-2">
             <Link
-              to="/residential"
+              to="/commercial"
               className="w-full bg-blue-700 text-white py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition text-center"
             >
-              Explore Properties →
+              Explore Commercial →
             </Link>
 
             <Link
               to="/new-page"
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2 rounded-lg text-sm font-medium hover:opacity-90 transition text-center"
             >
-              New Page
+              Lease Assistance
             </Link>
           </div>
-{/* <Link
-  to="/properties"
-  className="mt-2 w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-2 rounded-lg text-sm font-semibold hover:scale-[1.02] hover:shadow-lg transition-all duration-200 text-center"
->
-  View Properties
-</Link>
-<Link
-  to="/invest"
-  className="mt-2 w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-md hover:-translate-y-[1px] transition-all text-center"
->
-  Invest Now
-</Link>
-<Link
-  to="/luxury"
-  className="mt-2 w-full bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 text-white py-2 rounded-lg text-sm font-semibold hover:brightness-110 transition text-center"
->
-  Luxury Homes
-</Link>
-<Link
-  to="/contact"
-  className="mt-2 w-full bg-gradient-to-r from-gray-900 to-gray-700 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-xl hover:scale-[1.02] transition-all text-center"
->
-  Get Consultation
-</Link>
-<Link
-  to="/visit"
-  className="mt-2 w-full bg-gradient-to-r from-rose-500 to-red-600 text-white py-2 rounded-lg text-sm font-semibold hover:shadow-md hover:opacity-95 transition text-center"
->
-  Book Site Visit
-</Link>
-<Link
-  to="/explore"
-  className="mt-2 w-full bg-white/10 backdrop-blur-md border border-white/20 text-white py-2 rounded-lg text-sm font-medium hover:bg-white/20 transition text-center"
->
-  Explore Listings
-</Link>
-<Link
-  to="/find-homes"
-  className="mt-2 w-full bg-gradient-to-r from-[#1f6f3e] via-[#6e8f3a] to-[#e6d96a] text-gray-900 py-2 rounded-lg text-sm font-semibold shadow-md hover:shadow-lg hover:brightness-105 transition-all text-center"
->
-  Find Homes
-</Link> */}
 
         </div>
 
@@ -160,9 +122,9 @@ export default function ResidentialSection() {
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto scroll-smooth pb-2 no-scrollbar"
           >
-            {properties.filter(p => p.type !== "Commercial").slice(0,6).map((property) => (
+            {commercialProps.map((property) => (
               <div key={property.id} className="flex-shrink-0">
-                <PropertyCard property={property}/>
+                <PropertyCard property={property} themeColor="blue" />
               </div>
             ))}
           </div>

@@ -16,6 +16,7 @@ import WhySection from "../components/WhySection";
 import DownloadsSection from "../components/DownloadsSection";
 import SpecificationSection from "../components/SpecificationSection";
 import FloorPlanSection from "../components/FloorPlanSection";
+import CommercialPropertyView from "./CommercialPropertyView";
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -33,6 +34,10 @@ export default function PropertyDetails() {
       Property not found
     </div>
   );
+
+  if (property.type === "Commercial") {
+    return <CommercialPropertyView property={property} />;
+  }
 
   const isPlot = property.type === "Plot" || property.category === "Plots";
   const isResidential = ["Apartment", "Villa", "Builder Floor", "Independent House"].includes(property.type);

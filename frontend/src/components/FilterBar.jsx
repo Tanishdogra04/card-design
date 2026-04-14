@@ -46,10 +46,10 @@ export default function FilterBar({ filters, setFilters, openAdvanced }) {
   return (
     <div
       ref={filterRef}
-      className="bg-white border rounded-xl shadow-sm p-4 mb-8 flex flex-wrap items-center gap-3"
+      className="bg-white border rounded-xl shadow-sm p-4 mb-8 flex flex-wrap items-center gap-2 md:gap-3"
     >
 
-      <span className="text-xs font-semibold text-gray-500 uppercase">
+      <span className="text-xs font-semibold text-gray-500 uppercase hidden sm:inline">
         Filter :
       </span>
 
