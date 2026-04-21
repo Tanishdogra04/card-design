@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { ArrowLeft, ArrowRight, Home, Building, Trees, HeartPulse, Building2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Home, Building, Trees, HeartPulse, Building2, Landmark, School, Hospital, Hotel } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const optimize = (url, w = 600) =>
@@ -38,8 +38,8 @@ const CATEGORIES = [
       { name: "Row / Town Houses", img: "https://images.unsplash.com/photo-1600585152220-90363fe7e115" },
       { name: "Duplex Villas", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c" },
       { name: "Triplex Villas", img: "https://images.unsplash.com/photo-1613977257363-707ba9348227" },
-      { name: "Mansions", img: "https://upload.wikimedia.org/wikipedia/commons/7/7f/The_Breakers_rear.jpg" },
-      { name: "Palaces", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4pkgkZNcUL-IxdoTxTqhVtMAnup61MmeM8w&s" },
+      { name: "Mansions", img: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" },
+      { name: "Palaces", img: "https://images.unsplash.com/photo-1590059132718-50266070297c" },
       { name: "Estate Homes", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6" },
     ]
   },
@@ -51,8 +51,8 @@ const CATEGORIES = [
       { name: "Plots (75-100 sq yds)", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef" },
       { name: "Plots (150-250 sq yds)", img: "https://images.unsplash.com/photo-1577495508048-b635879837f1" },
       { name: "Plots (250-500 sq yds)", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef" },
-      { name: "Farm Houses", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxmX6rLsrCFbBmiqCxU461ontN8gk1GLy7Ag&s" },
-      { name: "Eco Plots", img: "https://www.cascadebuildtech.com/wp-content/uploads/2022/12/Eco-City-Phase-1-Plots.png" },
+      { name: "Farm Houses", img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef" },
+      { name: "Eco Plots", img: "https://images.unsplash.com/photo-1464822759844-d150f39a7e80" },
     ]
   },
   {
@@ -65,12 +65,44 @@ const CATEGORIES = [
     ]
   },
   {
-    title: "Commercial Spaces",
-    icon: <Building2 className="text-blue-400" size={24} />,
-    description: "Premium retail shops and luxury office spaces.",
+    title: "Government Infrastructure",
+    icon: <Landmark className="text-blue-600" size={24} />,
+    description: "Verified institutional plots and administrative hubs.",
     items: [
-      { name: "Retail Shops", img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8" },
-      { name: "Office Spaces", img: "https://images.unsplash.com/photo-1497366216548-37526070297c" },
+      { name: "Municipal Complexes", img: "https://images.unsplash.com/photo-1541829070764-84a7d30dee7a" },
+      { name: "Administrative Hubs", img: "https://images.unsplash.com/photo-1517466787919-ec0fd996a60e" },
+      { name: "Public Works Offices", img: "https://images.unsplash.com/photo-1577416412292-747c6607f055" },
+    ]
+  },
+  {
+    title: "Educational Institutions",
+    icon: <School className="text-blue-600" size={24} />,
+    description: "Premium campuses for schools, colleges, and research.",
+    items: [
+      { name: "University Campuses", img: "https://images.unsplash.com/photo-1523050335456-c7bb0f94883d" },
+      { name: "Private K-12 Schools", img: "https://images.unsplash.com/photo-1562774053-701939374585" },
+      { name: "Research Centers", img: "https://images.unsplash.com/photo-1532094349884-543bc11b234d" },
+    ]
+  },
+  {
+    title: "Healthcare Facilities",
+    icon: <Hospital className="text-blue-600" size={24} />,
+    description: "State-of-the-art hospitals and diagnostic centers.",
+    items: [
+      { name: "Multi-Specialty Hospitals", img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d" },
+      { name: "Specialized Clinics", img: "https://images.unsplash.com/photo-1586773860418-d3b97978c6d6" },
+      { name: "Diagnostic Centers", img: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c" },
+    ]
+  },
+  {
+    title: "Hospitality & Leisure",
+    icon: <Hotel className="text-blue-600" size={24} />,
+    description: "Premium stays from luxury hotels to boutique resorts.",
+    items: [
+      { name: "Luxury Hotels", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945" },
+      { name: "Vacation Resorts", img: "https://images.unsplash.com/photo-1540541338287-41700207dee6" },
+      { name: "Heritage Guest Houses", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750" },
+      { name: "Serviced Apartments", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
     ]
   }
 ];
@@ -78,6 +110,7 @@ const CATEGORIES = [
 const getFilterParams = (categoryTitle, itemName) => {
   let type = "";
   let bhk = "";
+  let subType = "";
 
   const title = categoryTitle.toLowerCase();
   const name = itemName.toLowerCase();
@@ -97,11 +130,22 @@ const getFilterParams = (categoryTitle, itemName) => {
     type = "Plot";
   } else if (title.includes("senior") || title.includes("retirement")) {
     type = "Senior Living";
-  } else if (title.includes("commercial")) {
-    type = "Commercial";
+  } else if (title.includes("government") || title.includes("education") || title.includes("healthcare") || title.includes("religious")) {
+    type = "Institutional";
+    if (title.includes("government")) subType = "Government";
+    else if (title.includes("education")) subType = "Education";
+    else if (title.includes("healthcare")) subType = "Healthcare";
+    else if (title.includes("religious")) subType = "Religious & Public";
+  } else if (title.includes("hospitality")) {
+    type = "Hospitality";
+    if (name.includes("hotel")) subType = "Hotels";
+    else if (name.includes("resort")) subType = "Resorts";
+    else if (name.includes("guest house")) subType = "Guest Houses";
+    else if (name.includes("serviced")) subType = "Serviced Apartments";
   }
 
-  return `?type=${type}&bhk=${bhk}&title=${encodeURIComponent(itemName)}`;
+
+  return `?type=${type}&bhk=${bhk}&subType=${subType}&title=${encodeURIComponent(itemName)}`;
 };
 
 export default function AllPropertyTypes() {

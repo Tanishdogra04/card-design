@@ -6,6 +6,7 @@ import FilterSection from "../components/FilterSection";
 import ExploreHeader from "../components/ExploreHeader";
 import { Link } from "react-router-dom";
 import data from "../data/newdataproperty.json";
+import InstitutionalSection from "../components/InstitutionalSection";
 
 const CATEGORY_CARDS = [
   { name: "Apartments", filterType: "Apartment", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
@@ -164,6 +165,8 @@ useEffect(() => {
 )}
         </div>
       </section>
+
+      <InstitutionalSection />
 
     </div>
   );

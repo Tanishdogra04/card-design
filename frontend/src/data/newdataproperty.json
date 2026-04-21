@@ -266,8 +266,11 @@
     "rera": "UPRERAPRJ8899",
     "price": 6500000,
     "badge": "Pre-Leased",
-    "type": "Commercial",
+    "type": "Office",
     "configuration": "Office Space",
+    "subType": "Private Office",
+    "status": "Ready to Move",
+    "amenities": ["High-speed Wi-Fi", "Conference Rooms", "Parking", "24/7 Security", "Cafeteria"],
     "area": "600 sq.ft",
     "images": [
       "https://images.unsplash.com/photo-1497366216548-37526070297c",
@@ -282,8 +285,11 @@
     "rera": "GGM/RERA/2023/12",
     "price": 12500000,
     "badge": "New Launch",
-    "type": "Commercial",
+    "type": "Office",
     "configuration": "Office Suite",
+    "subType": "Managed Office",
+    "status": "Under Fit-out",
+    "amenities": ["Fiber Internet", "Meeting Rooms", "Concierge", "EV Charging", "Gym"],
     "area": "1200 sq.ft",
     "images": [
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
@@ -346,8 +352,11 @@
     "rera": "GGM/RERA/2021/88",
     "price": 25000000,
     "badge": "Pre-Leased",
-    "type": "Commercial",
+    "type": "Office",
     "configuration": "IT Park",
+    "subType": "IT Park",
+    "status": "Ready to Move",
+    "amenities": ["Tier-4 Data Center", "Shuttle Service", "Food Court", "Centralized HVAC", "CCTV"],
     "area": "5000 sq.ft",
     "images": [
       "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
@@ -378,12 +387,662 @@
     "rera": "DLRERA/2022/12",
     "price": 9500000,
     "badge": "Under Construction",
-    "type": "Commercial",
+    "type": "Office",
     "configuration": "Upper Floor Office Units",
+    "subType": "Coworking Space",
+    "status": "Under Construction",
+    "amenities": ["Metro Connectivity", "Airport Views", "Member Lounge", "24/7 Access", "Phone Booths"],
     "area": "1200 sq.ft",
     "images": [
       "https://images.unsplash.com/photo-1497366216548-37526070297c",
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Dharamshala Mountain View",
+    "developer": "Himalayan Builders",
+    "location": "Dharamshala",
+    "rera": "HP/RERA/2023/01",
+    "price": 4200000,
+    "badge": "New Launch",
+    "type": "Apartment",
+    "configuration": "2 BHK",
+    "area": "950 sq.ft",
+    "facing": "North",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      "https://images.unsplash.com/photo-1464822759844-d150f39a7e80"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Kangra Valley Villas",
+    "developer": "Punjab Builders",
+    "location": "Kangra",
+    "rera": "HP/RERA/2022/15",
+    "price": 6800000,
+    "badge": "Ready to Move",
+    "type": "Villa",
+    "configuration": "3 BHK",
+    "area": "1800 sq.ft",
+    "facing": "East",
+    "furnishing": "Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Mumbai Marina Heights",
+    "developer": "Lodha Group",
+    "location": "Mumbai",
+    "rera": "MH/RERA/2023/45",
+    "price": 25000000,
+    "badge": "Premium",
+    "type": "Apartment",
+    "configuration": "4 BHK",
+    "area": "2800 sq.ft",
+    "facing": "West",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Pune Tech Park Residences",
+    "developer": "Pune Builders",
+    "location": "Pune",
+    "rera": "MH/RERA/2022/78",
+    "price": 12000000,
+    "badge": "IT Hub",
+    "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1600 sq.ft",
+    "facing": "South",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Hyderabad Cyberabad Towers",
+    "developer": "Cyberabad Developers",
+    "location": "Hyderabad",
+    "rera": "TS/RERA/2021/99",
+    "price": 18000000,
+    "badge": "Tech City",
+    "type": "Apartment",
+    "configuration": "4 BHK",
+    "area": "2200 sq.ft",
+    "facing": "North",
+    "furnishing": "Unfurnished",
+    "images": [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Compact 1 BHK Studio",
+    "developer": "Urban Spaces",
+    "location": "Delhi",
+    "rera": "DL/RERA/2024/12",
+    "price": 3500000,
+    "badge": "Affordable",
+    "type": "Apartment",
+    "configuration": "1 BHK",
+    "area": "550 sq.ft",
+    "facing": "East",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Luxury 1 BHK Penthouse",
+    "developer": "Elite Builders",
+    "location": "Mumbai",
+    "rera": "MH/RERA/2023/89",
+    "price": 8500000,
+    "badge": "Penthouse",
+    "type": "Apartment",
+    "configuration": "1 BHK",
+    "area": "800 sq.ft",
+    "facing": "West",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Budget 2 BHK Flat",
+    "developer": "Value Homes",
+    "location": "Noida",
+    "rera": "UP/RERA/2024/34",
+    "price": 2800000,
+    "badge": "Budget",
+    "type": "Apartment",
+    "configuration": "2 BHK",
+    "area": "850 sq.ft",
+    "facing": "South",
+    "furnishing": "Unfurnished",
+    "images": [
+      "https://images.unsplash.com/photo-1554995207-c18c203602cb",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Premium 3 BHK Villa",
+    "developer": "Royal Estates",
+    "location": "Gurgaon",
+    "rera": "HR/RERA/2022/67",
+    "price": 35000000,
+    "badge": "Luxury",
+    "type": "Villa",
+    "configuration": "5 BHK",
+    "area": "4500 sq.ft",
+    "facing": "North",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Compact Builder Floor",
+    "developer": "Smart Spaces",
+    "location": "Chandigarh",
+    "rera": "PB/RERA/2023/45",
+    "price": 6500000,
+    "badge": "Compact",
+    "type": "Builder Floor",
+    "configuration": "2 BHK",
+    "area": "1200 sq.ft",
+    "facing": "East",
+    "furnishing": "Semi-Furnished",
+    "floorNumber": "1st",
+    "parking": "1 Covered",
+    "ownership": "Freehold",
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Large Plot Estate",
+    "developer": "Land Masters",
+    "location": "Bangalore",
+    "rera": "KA/RERA/2021/89",
+    "price": 15000000,
+    "badge": "Large Plot",
+    "type": "Plot",
+    "configuration": "Residential Plot",
+    "area": "500 sq.yd",
+    "facing": "West",
+    "images": [
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1",
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Small Plot Investment",
+    "developer": "Plot Plus",
+    "location": "Pune",
+    "rera": "MH/RERA/2024/12",
+    "price": 2000000,
+    "badge": "Investment",
+    "type": "Plot",
+    "configuration": "Residential Plot",
+    "area": "100 sq.yd",
+    "facing": "South",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      "https://images.unsplash.com/photo-1577495508048-b635879837f1"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Luxury Senior Living",
+    "developer": "Golden Years",
+    "location": "Delhi",
+    "rera": "DL/RERA/2022/78",
+    "price": 22000000,
+    "badge": "Luxury Care",
+    "type": "Senior Living",
+    "configuration": "3 BHK",
+    "area": "1500 sq.ft",
+    "facing": "North",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1586105251261-72a756497a11",
+      "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Affordable Senior Homes",
+    "developer": "Care Homes",
+    "location": "Chandigarh",
+    "rera": "PB/RERA/2023/34",
+    "price": 5500000,
+    "badge": "Affordable Care",
+    "type": "Senior Living",
+    "configuration": "1 BHK",
+    "area": "700 sq.ft",
+    "facing": "East",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5",
+      "https://images.unsplash.com/photo-1586105251261-72a756497a11"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Mumbai Commercial Hub",
+    "developer": "Metro Developers",
+    "location": "Mumbai",
+    "rera": "MH/RERA/2022/56",
+    "price": 35000000,
+    "badge": "Prime Location",
+    "type": "Commercial",
+    "configuration": "Commercial Complex",
+    "area": "2500 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Delhi Retail Plaza",
+    "developer": "Capital Malls",
+    "location": "Delhi",
+    "rera": "DL/RERA/2023/89",
+    "price": 18000000,
+    "badge": "High Footfall",
+    "type": "Commercial",
+    "configuration": "Retail Plaza",
+    "area": "1200 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Pune IT Campus",
+    "developer": "Tech Parks India",
+    "location": "Pune",
+    "rera": "MH/RERA/2021/67",
+    "price": 28000000,
+    "badge": "IT Campus",
+    "type": "Office",
+    "configuration": "IT Campus",
+    "subType": "IT Park",
+    "status": "Ready to Move",
+    "amenities": ["High-speed Internet", "Data Center", "Cafeteria", "Gym", "Parking"],
+    "area": "4000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Hyderabad Tech Tower",
+    "developer": "Cyber Towers",
+    "location": "Hyderabad",
+    "rera": "TS/RERA/2020/45",
+    "price": 22000000,
+    "badge": "Tech Tower",
+    "type": "Office",
+    "configuration": "Tech Office Tower",
+    "subType": "Executive Office",
+    "status": "Under Construction",
+    "amenities": ["Smart Building", "EV Charging", "Rooftop Garden", "Conference Center", "Security"],
+    "area": "3000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Bangalore Co-working Hub",
+    "developer": "WorkSpaces India",
+    "location": "Bangalore",
+    "rera": "KA/RERA/2023/12",
+    "price": 8500000,
+    "badge": "Co-working",
+    "type": "Office",
+    "configuration": "Co-working Space",
+    "subType": "Coworking Space",
+    "status": "Ready to Move",
+    "amenities": ["High-speed WiFi", "Meeting Rooms", "Coffee Bar", "24/7 Access", "Events"],
+    "area": "1500 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Chandigarh Business Center",
+    "developer": "Business Parks",
+    "location": "Chandigarh",
+    "rera": "PB/RERA/2022/78",
+    "price": 12000000,
+    "badge": "Business Center",
+    "type": "Office",
+    "configuration": "Business Center",
+    "subType": "Serviced Office",
+    "status": "Ready to Move",
+    "amenities": ["Reception", "IT Support", "Meeting Rooms", "Parking", "Cafeteria"],
+    "area": "1000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Noida Industrial Plot",
+    "developer": "Industrial Estates",
+    "location": "Noida",
+    "rera": "UP/RERA/2021/34",
+    "price": 25000000,
+    "badge": "Industrial",
+    "type": "Commercial",
+    "configuration": "Industrial Plot",
+    "area": "10000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Gurgaon Warehouse Space",
+    "developer": "Logistics Parks",
+    "location": "Gurgaon",
+    "rera": "HR/RERA/2020/56",
+    "price": 18000000,
+    "badge": "Warehouse",
+    "type": "Commercial",
+    "configuration": "Warehouse",
+    "area": "5000 sq.ft",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+      "https://images.unsplash.com/photo-1581094794329-c8112a89af12"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Dharamshala Eco Resort Plots",
+    "developer": "Mountain Estates",
+    "location": "Dharamshala",
+    "rera": "HP/RERA/2024/02",
+    "price": 5500000,
+    "badge": "Eco Resort",
+    "type": "Plot",
+    "configuration": "Resort Plot",
+    "area": "300 sq.yd",
+    "facing": "North",
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      "https://images.unsplash.com/photo-1464822759844-d150f39a7e80"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Kangra Farm House Plots",
+    "developer": "Valley Farms",
+    "location": "Kangra",
+    "rera": "HP/RERA/2023/08",
+    "price": 3200000,
+    "badge": "Farm House",
+    "type": "Plot",
+    "configuration": "Farm Plot",
+    "area": "200 sq.yd",
+    "facing": "East",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      "https://images.unsplash.com/photo-1574677708577-44674bd600d8",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Mumbai Beachfront Villa",
+    "developer": "Coastal Estates",
+    "location": "Mumbai",
+    "rera": "MH/RERA/2022/91",
+    "price": 45000000,
+    "badge": "Beachfront",
+    "type": "Villa",
+    "configuration": "6 BHK",
+    "area": "6000 sq.ft",
+    "facing": "West",
+    "furnishing": "Fully Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Pune Hill View Apartment",
+    "developer": "Hill View Builders",
+    "location": "Pune",
+    "rera": "MH/RERA/2023/23",
+    "price": 9500000,
+    "badge": "Hill View",
+    "type": "Apartment",
+    "configuration": "3 BHK",
+    "area": "1400 sq.ft",
+    "facing": "South",
+    "furnishing": "Semi-Furnished",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb",
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Hyderabad Lake View Villa",
+    "developer": "Lake Estates",
+    "location": "Hyderabad",
+    "rera": "TS/RERA/2021/76",
+    "price": 28000000,
+    "badge": "Lake View",
+    "type": "Villa",
+    "configuration": "4 BHK",
+    "area": "3500 sq.ft",
+    "facing": "East",
+    "furnishing": "Unfurnished",
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Delhi Heritage Builder Floor",
+    "developer": "Heritage Builders",
+    "location": "Delhi",
+    "rera": "DL/RERA/2020/45",
+    "price": 19500000,
+    "badge": "Heritage",
+    "type": "Builder Floor",
+    "configuration": "5 BHK",
+    "area": "3200 sq.ft",
+    "facing": "North",
+    "furnishing": "Fully Furnished",
+    "floorNumber": "3rd",
+    "parking": "2 Covered",
+    "ownership": "Freehold",
+    "images": [
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde"
+    ]
+  },
+  {
+    "id": 901,
+    "name": "Central Municipal HQ",
+    "developer": "NDMC Governance",
+    "location": "Lutyens Delhi, Delhi",
+    "price": 1250000000,
+    "badge": "Public Asset",
+    "type": "Institutional",
+    "subType": "Government",
+    "configuration": "Main Block + Annex",
+    "area": "1.2 Lakh sq.ft",
+    "rera": "GOVT-INST-001",
+    "images": [
+      "https://images.unsplash.com/photo-1517466787919-ec0fd996a60e",
+      "https://images.unsplash.com/photo-1541829070764-84a7d30dee7a",
+      "https://images.unsplash.com/photo-1577416412292-747c6607f055"
+    ]
+  },
+  {
+    "id": 902,
+    "name": "Global Tech University",
+    "developer": "EduTrust Holdings",
+    "location": "Whitefield, Bangalore",
+    "price": 850000000,
+    "badge": "Premium Campus",
+    "type": "Institutional",
+    "subType": "Education",
+    "configuration": "Academic Block",
+    "area": "2.5 Lakh sq.ft",
+    "rera": "EDU-INST-442",
+    "images": [
+      "https://images.unsplash.com/photo-1523050335456-c7bb0f94883d",
+      "https://images.unsplash.com/photo-1562774053-701939374585",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+    ]
+  },
+  {
+    "id": 903,
+    "name": "Metro Life Hospital",
+    "developer": "HealthFirst Group",
+    "location": "Andheri West, Mumbai",
+    "price": 1100000000,
+    "badge": "Super-Specialty",
+    "type": "Institutional",
+    "subType": "Healthcare",
+    "configuration": "500-Bed Facility",
+    "area": "1.8 Lakh sq.ft",
+    "rera": "HLTH-INST-991",
+    "images": [
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d",
+      "https://images.unsplash.com/photo-1586773860418-d3b97978c6d6",
+      "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c"
+    ]
+  },
+  {
+    "id": 904,
+    "name": "Zen Heritage Center",
+    "developer": "Cultural Foundation",
+    "location": "Panjim, Goa",
+    "price": 320000000,
+    "badge": "Heritage Icon",
+    "type": "Institutional",
+    "subType": "Religious & Public",
+    "configuration": "Community Hall",
+    "area": "45,000 sq.ft",
+    "rera": "PB-GOA-773",
+    "images": [
+      "https://images.unsplash.com/photo-1438232992991-995b7058bbb3",
+      "https://images.unsplash.com/photo-1548625361-195fe57e32a3",
+      "https://images.unsplash.com/photo-1548013146-72479768bbaa"
+    ]
+  },
+  {
+    "id": 905,
+    "name": "The Royal Palms Hotel",
+    "developer": "Elite Stays Ltd",
+    "location": "Juhu, Mumbai",
+    "price": 280000000,
+    "badge": "5-Star Luxury",
+    "type": "Hospitality",
+    "subType": "Hotels",
+    "configuration": "220 Luxury Rooms",
+    "area": "1.5 Lakh sq.ft",
+    "rera": "HOSP-MH-331",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+    ]
+  },
+  {
+    "id": 906,
+    "name": "Cloud Mist Resort",
+    "developer": "Nature Retreats",
+    "location": "Manali, HP",
+    "price": 145000000,
+    "badge": "Top Vacation Spot",
+    "type": "Hospitality",
+    "subType": "Resorts",
+    "configuration": "Boutique Cottages",
+    "area": "5.5 Acres",
+    "rera": "HOSP-HP-882",
+    "images": [
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6",
+      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+    ]
+  },
+  {
+    "id": 907,
+    "name": "Amber Haveli Guest House",
+    "developer": "Heritage Stays",
+    "location": "Amer, Jaipur",
+    "price": 65000000,
+    "badge": "Traditional Stay",
+    "type": "Hospitality",
+    "subType": "Guest Houses",
+    "configuration": "Imperial Suite",
+    "area": "12,000 sq.ft",
+    "rera": "HOSP-RJ-119",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750",
+      "https://images.unsplash.com/photo-1590073844006-33379778ae09",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+    ]
+  },
+  {
+    "id": 908,
+    "name": "Urban Elite Apartments",
+    "developer": "City Comforts",
+    "location": "MG Road, Gurgaon",
+    "price": 42000000,
+    "badge": "Executive Stays",
+    "type": "Hospitality",
+    "subType": "Serviced Apartments",
+    "configuration": "2 BHK Serviced",
+    "area": "1,450 sq.ft",
+    "rera": "HOSP-HR-225",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2"
     ]
   }
 ]

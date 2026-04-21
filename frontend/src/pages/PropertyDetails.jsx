@@ -17,6 +17,7 @@ import DownloadsSection from "../components/DownloadsSection";
 import SpecificationSection from "../components/SpecificationSection";
 import FloorPlanSection from "../components/FloorPlanSection";
 import CommercialPropertyView from "./CommercialPropertyView";
+import InstitutionalPropertyView from "./InstitutionalPropertyView";
 
 export default function PropertyDetails() {
   const { id } = useParams();
@@ -37,6 +38,10 @@ export default function PropertyDetails() {
 
   if (property.type === "Commercial") {
     return <CommercialPropertyView property={property} />;
+  }
+
+  if (property.type === "Institutional") {
+    return <InstitutionalPropertyView property={property} />;
   }
 
   const isPlot = property.type === "Plot" || property.category === "Plots";

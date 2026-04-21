@@ -63,7 +63,7 @@ export default function BuilderFloorCard({ property }) {
           alt={property.name}
           className="w-full h-full object-cover"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
         />
 
         {/* BADGE */}

@@ -9,13 +9,12 @@ import {
   Download,
   Phone,
   Eye,
-  BedDouble,
+  Building2,
   Ruler,
-  Building,
-  Maximize
+  Users
 } from "lucide-react";
 
-export default function PropertyCard({ property, themeColor = "blue" }) {
+export default function OfficeCard({ property, themeColor = "blue" }) {
   const navigate = useNavigate();
   const [current, setCurrent] = useState(0);
   const [liked, setLiked] = useState(false);
@@ -35,7 +34,7 @@ export default function PropertyCard({ property, themeColor = "blue" }) {
   const shareProperty = () => {
     const shareData = {
       title: property.name,
-      text: `Check out this property: ${property.name}`,
+      text: `Check out this office: ${property.name}`,
       url: window.location.href
     };
 
@@ -79,13 +78,13 @@ export default function PropertyCard({ property, themeColor = "blue" }) {
       <div className="relative group">
 
         <img
-          src={property.images?.[current] || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"}
+          src={property.images?.[current] || "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"}
           alt={property.name}
           className="h-[240px] w-full object-cover"
           loading="eager"
           fetchPriority="high"
           onError={(e) => {
-            e.target.src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80";
+            e.target.src = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80";
             e.target.onerror = null;
           }}
         />
@@ -149,6 +148,11 @@ export default function PropertyCard({ property, themeColor = "blue" }) {
           ))}
         </div>
 
+        {/* PRICE OVERLAY */}
+        <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur-sm text-white text-sm font-bold px-3 py-2 rounded-lg shadow-lg">
+          {typeof property.price === 'number' ? `₹ ${(property.price / 100000).toFixed(1)} L` : property.price}
+        </div>
+
       </div>
 
       {/* DETAILS */}
@@ -184,31 +188,34 @@ export default function PropertyCard({ property, themeColor = "blue" }) {
           <span className="font-medium">RERA: {property.rera || "Awaited"}</span>
         </div>
 
-        {/* PRICE */}
-        <p className={`${theme.text} font-bold text-lg`}>
-          {typeof property.price === 'number' ? `₹ ${(property.price / 100000).toFixed(1)} L` : property.price}
-        </p>
+        {/* AMENITIES */}
+        <div className="flex flex-wrap gap-2">
+          {property.amenities?.slice(0, 3).map((amenity, index) => (
+            <span
+              key={index}
+              className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-md font-medium"
+            >
+              {amenity}
+            </span>
+          ))}
+        </div>
 
-        {/* CONFIGURATION */}
+        {/* OFFICE SPECIFICATIONS */}
         <div className="grid grid-cols-3 text-[10px] sm:text-xs text-gray-600 gap-2 font-medium">
 
           <div className="flex items-center gap-1 whitespace-nowrap">
-            {["Institutional", "Commercial"].includes(property.type) ? (
-              <Maximize size={14} className={`shrink-0 ${theme.secondaryText}`} />
-            ) : (
-              <BedDouble size={14} className={`shrink-0 ${theme.secondaryText}`} />
-            )}
-            <span className="truncate">{property.configuration}</span>
-          </div>
-
-          <div className="flex items-center gap-1 whitespace-nowrap">
-            <Ruler size={14} className={`shrink-0 ${theme.secondaryText}`} />
+            <Building2 size={14} className={`shrink-0 ${theme.secondaryText}`} />
             <span className="truncate">{property.area}</span>
           </div>
 
           <div className="flex items-center gap-1 whitespace-nowrap">
-            <Building size={14} className={`shrink-0 ${theme.secondaryText}`} />
-            <span className="truncate">{property.type}</span>
+            <Users size={14} className={`shrink-0 ${theme.secondaryText}`} />
+            <span className="truncate">{property.capacity || "Flexible"}</span>
+          </div>
+
+          <div className="flex items-center gap-1 whitespace-nowrap">
+            <Building2 size={14} className={`shrink-0 ${theme.secondaryText}`} />
+            <span className="truncate">{property.subType || "Office"}</span>
           </div>
 
         </div>
@@ -227,7 +234,7 @@ export default function PropertyCard({ property, themeColor = "blue" }) {
           </div>
 
           <button
-            onClick={() => navigate(`/property/${property.id}`)}
+            onClick={() => navigate(`/office-details/${property.id}`)}
             className={`w-full ${theme.bg} text-white font-black uppercase tracking-widest text-[11px] py-3 rounded-lg ${theme.hoverBg} transition shadow-lg ${theme.shadow}`}
           >
             View Details

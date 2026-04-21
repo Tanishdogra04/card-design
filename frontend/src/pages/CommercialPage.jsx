@@ -18,12 +18,6 @@ const CATEGORY_CARDS = [
     filterType: "Retail", 
     img: "https://images.unsplash.com/photo-1555421689-491a97ff2040",
     subcategories: ["Kiosks", "Food Court Space", "High Street Shops"]
-  },
-  { 
-    name: "Office Spaces", 
-    filterType: "Office", 
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c",
-    subcategories: ["IT Park", "Corporate Tower"]
   }
 ];
 
@@ -45,9 +39,8 @@ const CommercialPage = () => {
     
     // In our dummy data, we might have basic subtypes. To simulate this working nicely:
     const matchesCommercialCategory = !filters.type || 
-            (filters.type === "SCO" && ["Retail Shop", "Office Suite", "Showroom", "Corner SCO Units", "Anchor Store Units", "Upper Floor Office Units", "Basement Retail/Storage"].includes(property.configuration)) ||
-            (filters.type === "Retail" && ["Retail Shop", "Showroom", "Kiosks", "Food Court Space", "High Street Shops"].includes(property.configuration)) ||
-            (filters.type === "Office" && ["Office Space", "Office Suite", "IT Park", "Corporate Tower"].includes(property.configuration));
+            (filters.type === "SCO" && ["Retail Shop", "Showroom", "Corner SCO Units", "Anchor Store Units", "Basement Retail/Storage"].includes(property.configuration)) ||
+            (filters.type === "Retail" && ["Retail Shop", "Showroom", "Kiosks", "Food Court Space", "High Street Shops"].includes(property.configuration));
 
     // Note: Dummy data doesn't currently contain ownership, amenities, or postedWithin, 
     // so we don't strictly filter them out here to prevent hiding all results,

@@ -14,10 +14,8 @@ import {
   ArrowUpRight
 } from "lucide-react";
 
-
-
 export default function NewPropertyCard({ property }) {
-  
+
 const navigate = useNavigate();
   const [index, setIndex] = useState(0);
   const [liked, setLiked] = useState(false);
@@ -55,7 +53,7 @@ const navigate = useNavigate();
 
   return (
 
-   
+
 
      <div className="bg-white rounded-[1.5rem] shadow-xl shadow-slate-900/[0.05] border border-slate-200/60 overflow-hidden w-full h-full flex flex-col"
 >
@@ -64,11 +62,15 @@ const navigate = useNavigate();
         <div className="relative h-[220px] overflow-hidden">
 
           <img
-            src={images[index]}
+            src={images[index] || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"}
             alt={property.name}
             className="w-full h-full object-cover"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
+            onError={(e) => {
+              e.target.src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80";
+              e.target.onerror = null;
+            }}
           />
 
           {/* BADGE */}
@@ -257,7 +259,7 @@ const navigate = useNavigate();
 
       </div>
 
-  
+
 
   );
 }
