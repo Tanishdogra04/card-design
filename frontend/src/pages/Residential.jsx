@@ -7,6 +7,7 @@ import ExploreHeader from "../components/ExploreHeader";
 import { Link } from "react-router-dom";
 import data from "../data/newdataproperty.json";
 import InstitutionalSection from "../components/InstitutionalSection";
+import SectionBanner from "../components/SectionBanner";
 
 const CATEGORY_CARDS = [
   { name: "Apartments", filterType: "Apartment", img: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" },
@@ -60,25 +61,15 @@ useEffect(() => {
     <div className="bg-gray-50 min-h-screen">
 
       {/* Banner */}
-      <section className="relative h-[220px] sm:h-[260px] md:h-[320px]">
-        <ExploreHeader />
-        
-        <img
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
-          alt="Residential"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/50"></div>
-
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold">
-            Residential Properties
-          </h1>
-          <p className="mt-2 text-xs sm:text-sm md:text-base text-gray-200 max-w-xl">
-            Explore apartments, villas & more in top locations
-          </p>
-        </div>
-      </section>
+      <ExploreHeader />
+      <SectionBanner 
+        title="Residential Properties"
+        subtitle="Explore luxury apartments, villas, and independent floors in the most serene locations of Himachal."
+        ctaText="View All Listings"
+        link="#property-list"
+        bgImage="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
+        gradient="from-black/60 to-transparent"
+      />
 
       {/* Categories */}
      <section className="px-4 sm:px-6 md:px-10 py-8 md:py-10">
@@ -134,6 +125,7 @@ useEffect(() => {
   </div>
 </section>
 
+
       {/* ✅ Filter */}
       <FilterSection 
   filters={filters} 
@@ -165,6 +157,16 @@ useEffect(() => {
 )}
         </div>
       </section>
+
+<SectionBanner 
+  title="Invest in Your Future"
+  subtitle="Explore institutional and hospitality investment opportunities in Himachal's growing landscape."
+  ctaText="Explore Investments"
+  link="/invest"
+  bgImage="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+  gradient="from-indigo-900/80 to-transparent"
+  reverse={true}
+/>
 
       <InstitutionalSection />
 
