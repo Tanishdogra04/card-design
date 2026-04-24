@@ -75,7 +75,7 @@ export default function InstitutionalAllTypes() {
     <div className="min-h-screen bg-gray-50 pb-20">
 
       {/* Hero Section */}
-      <section className="relative h-[300px] sm:h-[400px] w-full overflow-hidden">
+      <section className="relative min-h-[500px] sm:min-h-[600px] w-full overflow-hidden flex items-center pt-20 pb-20">
         <div className="absolute inset-0">
           <img
             src={optimize("https://images.unsplash.com/photo-1577416412292-747c6607f055", 1400)}
@@ -85,20 +85,21 @@ export default function InstitutionalAllTypes() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/60 to-transparent"></div>
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-16 z-10 max-w-7xl mx-auto">
+        <div className="absolute inset-0 flex items-center z-10">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 w-full flex flex-col justify-center">
           <Link to="/institutional" className="flex items-center text-blue-200 hover:text-white mb-6 w-fit transition-colors bg-blue-900/40 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-400/20">
             <ArrowLeft size={18} className="mr-2" />
             Back to Institutional
           </Link>
 
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter drop-shadow-2xl">
+          <h1 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter drop-shadow-2xl leading-tight">
             Asset <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-300">Segments</span>
           </h1>
-          <p className="text-lg md:text-xl text-blue-100 max-w-2xl font-bold drop-shadow leading-tight">
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl font-bold drop-shadow leading-tight mb-8">
             Comprehensive index of specialized infrastructure, public services, and large-scale educational facilities.
           </p>
           
-          <div className="flex items-center gap-6 mt-8">
+          <div className="flex items-center gap-6">
              <div className="flex items-center gap-2 text-white/60">
                 <ShieldCheck size={20} className="text-blue-400" />
                 <span className="text-[10px] font-black uppercase tracking-widest">Verified Assets</span>
@@ -109,10 +110,11 @@ export default function InstitutionalAllTypes() {
              </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Categories */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 -mt-10 relative z-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-20 relative z-20">
         <div className="space-y-12 md:space-y-16">
           {CATEGORIES.map((category, idx) => (
             <div key={idx} className="bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-blue-50 overflow-hidden">

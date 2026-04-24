@@ -12,7 +12,7 @@ const SectionBanner = ({
   reverse = false
 }) => {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden group">
+    <div className="relative w-full h-[240px] md:h-[320px] overflow-hidden group">
       {/* Background Image with Parallax-like effect */}
       <div 
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -24,25 +24,25 @@ const SectionBanner = ({
 
       {/* Content */}
       <div className={`relative h-full max-w-7xl mx-auto px-6 md:px-10 flex flex-col justify-center ${reverse ? 'items-end text-right' : 'items-start text-left'}`}>
-        <div className="max-w-2xl space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+        <div className="max-w-2xl space-y-2">
+          <h2 className="text-xl md:text-3xl font-black text-white leading-tight tracking-tight">
             {title}
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 font-light">
+          <p className="text-sm md:text-base text-gray-200 font-medium">
             {subtitle}
           </p>
           <Link 
             to={link}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-black hover:text-white transition-all duration-300 group/btn"
+            className="inline-flex items-center gap-2 px-6 py-2 bg-white text-black font-black uppercase tracking-widest text-xs rounded-full hover:bg-black hover:text-white transition-all duration-500 group/btn shadow-2xl hover:shadow-white/20 active:scale-95"
           >
             {ctaText}
-            <ArrowRight size={20} className="transition-transform group-hover/btn:translate-x-1" />
+            <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-2" />
           </Link>
         </div>
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
     </div>
   );
 };

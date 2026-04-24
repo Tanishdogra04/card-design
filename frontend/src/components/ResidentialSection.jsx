@@ -35,12 +35,12 @@ export default function ResidentialSection() {
 
   return (
     <>
-    <section className="pt-16 pb-6 px-6 md:px-10 bg-gray-50">
+    <section className="pt-6 pb-6 px-6 md:px-10 bg-gray-50">
 
       <div className="flex flex-col lg:flex-row gap-6 items-stretch">
 
         {/* LEFT CARD */}
-        <div className="w-full lg:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 shadow-sm border border-blue-100 flex flex-col">
+        <div className="w-full lg:w-[260px] flex-shrink-0 bg-gradient-to-br from-blue-50 to-white rounded-xl p-4 shadow-sm border border-blue-100 flex flex-col">
 
           <div>
 
@@ -49,15 +49,15 @@ export default function ResidentialSection() {
               <Home size={26}/>
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800">
+            <h3 className="text-base font-bold text-gray-800">
               Residential Properties
             </h3>
 
-            <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+            <p className="text-xs text-gray-500 mt-2 leading-relaxed">
               Explore apartments, villas and plots from verified developers across top locations.
             </p>
 
-            <div className="mt-3 space-y-2 text-sm text-gray-700">
+            <div className="mt-3 space-y-2 text-xs text-gray-700">
 
               <div className="flex items-center gap-2">
                 <ShieldCheck size={18} className="text-blue-700"/>

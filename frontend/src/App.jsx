@@ -14,6 +14,7 @@ import OfficeDetails from "./pages/OfficeDetails";
 import InstitutionalPage from "./pages/InstitutionalPage";
 import InstitutionalAllTypes from "./pages/InstitutionalAllTypes";
 import HospitalityPage from "./pages/HospitalityPage";
+import HospitalityAllTypes from "./pages/HospitalityAllTypes";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/institutional" element={<InstitutionalPage />} />
         <Route path="/institutional-all-types" element={<InstitutionalAllTypes />} />
         <Route path="/hospitality" element={<HospitalityPage />} />
+        <Route path="/hospitality-all-types" element={<HospitalityAllTypes />} />
       </Routes>
     </BrowserRouter>
   );

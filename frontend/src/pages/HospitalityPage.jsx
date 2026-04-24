@@ -106,7 +106,7 @@ const HospitalityPage = () => {
             <p className="text-gray-500 font-medium mt-1">Explore property segments across the hospitality sector</p>
           </div>
           
-          <Link to="/explore-types" className="text-rose-700 font-bold flex items-center gap-2 group hover:gap-3 transition-all">
+          <Link to="/hospitality-all-types" className="text-rose-700 font-bold flex items-center gap-2 group hover:gap-3 transition-all">
              View All Segments <ArrowRight size={18} />
           </Link>
         </div>
